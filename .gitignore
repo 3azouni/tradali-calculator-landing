@@ -1,0 +1,15 @@
+node_modules/
+.wrangler/
+.devtools/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+_design_*.html
+scripts/extract-design.js
+scripts/shrink-design.js
+scripts/unpack-template.js
+scripts/clean-page.js

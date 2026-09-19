@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tradali-calculator-landing",
+  "compatibility_date": "2026-09-13",
+  "main": "src/worker.js",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    {
+      "pattern": "tradali.com/calculator*",
+      "zone_name": "tradali.com"
+    },
+    {
+      "pattern": "www.tradali.com/calculator*",
+      "zone_name": "tradali.com"
+    },
+    {
+      "pattern": "ratepocket.tradali.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "calculator.tradali.com/*",
+      "zone_name": "tradali.com"
+    }
+  ],
+  "workers_dev": true
+}
