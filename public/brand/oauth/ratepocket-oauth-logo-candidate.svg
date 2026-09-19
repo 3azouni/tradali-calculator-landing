@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="RatePocket logo candidate">
+  <!-- Candidate mark for Google OAuth branding review. Not trademark-cleared. Preserve existing logo-r.png until approved. -->
+  <rect width="512" height="512" rx="96" fill="#0A0A0E"/>
+  <!-- Pocket body -->
+  <path d="M128 156h256c18 0 32 14 32 32v188c0 44-36 80-80 80H176c-44 0-80-36-80-80V188c0-18 14-32 32-32z" fill="none" stroke="#A79BFF" stroke-width="36" stroke-linejoin="round"/>
+  <!-- Pocket flap -->
+  <path d="M128 188c40 36 96 56 128 56s88-20 128-56" fill="none" stroke="#A79BFF" stroke-width="28" stroke-linecap="round"/>
+  <!-- Rate chevron / currency hint -->
+  <path d="M214 268h84M256 236v108" stroke="#7C6FF0" stroke-width="28" stroke-linecap="round"/>
+  <path d="M220 300l36 36 36-36" fill="none" stroke="#7C6FF0" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

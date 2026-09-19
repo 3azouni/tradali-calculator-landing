@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Delete Account &amp; Data — RatePocket</title>
-  <meta name="description" content="Request deletion of your RatePocket Cloud Backup account and associated data. Published by Tradali.">
+  <meta name="description" content="Delete your RatePocket Cloud Backup account in the app, or request deletion by email. Published by Tradali.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0A0A0E">
   <link rel="icon" type="image/png" href="../brand/logo-r.png">
@@ -18,52 +18,72 @@
   <div class="page">
     <nav class="nav">
       <a class="brand" href="../" aria-label="RatePocket home">
-        <img class="brand-logo" src="../brand/logo-r.png" width="28" height="28" alt="" decoding="async">
+        <img class="brand-logo" src="../brand/ratepocket-mark-purple.svg" width="28" height="28" alt="RatePocket logo" decoding="async">
         <span class="brand-name">RatePocket</span>
       </a>
       <div class="nav-links">
+        <a href="../terms/">Terms</a>
         <a href="../privacy/">Privacy</a>
         <a href="./">Delete account</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="mailto:support.tradali@gmail.com">Contact</a>
+      <a class="btn btn-primary btn-sm" href="mailto:support.tradali@gmail.com">Support</a>
     </nav>
     <div class="shell">
 
     <article class="legal">
       <p class="legal-crumb"><a href="../">RatePocket</a> · Account &amp; data deletion</p>
       <h1>Delete your RatePocket account &amp; data</h1>
-      <p class="updated">App: <strong>RatePocket</strong> · Developer: <strong>Tradali</strong> · Package: <strong>com.tradali.calculator</strong></p>
+      <p class="updated">App: <strong>RatePocket</strong> · Package: <strong>com.tradali.calculator</strong></p>
 
       <div class="legal-card">
-        <p>Use this page to request deletion of your <strong>RatePocket</strong> Cloud Backup account and associated cloud data. This page is provided for Google Play’s account deletion / data deletion requirements and for anyone who signed in for Cloud Backup.</p>
+        <p>RatePocket is operated by an individual developer using the name <strong>Tradali</strong>. Use this page to delete or request deletion of your <strong>RatePocket</strong> Cloud Backup account and associated cloud data. Google Play requires both an in-app deletion path and a web resource for apps that create accounts. RatePocket provides both.</p>
       </div>
 
       <h2>What RatePocket accounts are</h2>
-      <p>RatePocket does <strong>not</strong> use a separate email/password signup. An account is created only if you enable <strong>Cloud Backup</strong> and complete <strong>Google Sign-In</strong> (via Supabase). Core calculator, converter, and local spending tracking work without an account.</p>
+      <p>RatePocket does <strong>not</strong> use a separate email/password signup. An account is created only if you enable <strong>Cloud Backup</strong>, which requires an active subscription and <strong>Google Sign-In</strong> (via Supabase). Core calculator, converter, and local spending tracking work without an account.</p>
 
-      <h2>What gets deleted when you request account deletion</h2>
+      <h2>Four different actions (do not confuse them)</h2>
+      <ul>
+        <li><strong>Sign out</strong> — Settings → Sign out. Stops Cloud Backup sync for that session. Local spending data stays on the device. Your cloud account remains.</li>
+        <li><strong>Clear data</strong> — Settings → Clear data. Removes spending history on this device, and also clears cloud spending data if you are signed in. Your Google sign-in and Play purchases stay.</li>
+        <li><strong>Delete account</strong> — Settings → Delete account (signed-in only), or email request below. Permanently deletes your Cloud Backup authentication account and associated cloud spending data, then resets local spending data on that device.</li>
+        <li><strong>Cancel Cloud Backup subscription</strong> — Google Play → Payments &amp; subscriptions (or equivalent). Cancelling billing does <strong>not</strong> by itself delete your cloud account. Delete the account separately if you want cloud data removed.</li>
+      </ul>
+
+      <h2>In-app deletion (recommended when you still have the app)</h2>
+      <ol style="padding-left:20px;margin:0 0 12px;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:15px;line-height:1.65">
+        <li>Open <strong>RatePocket</strong> on Android.</li>
+        <li>Go to <strong>Settings</strong>.</li>
+        <li>Under <strong>Account &amp; data</strong>, make sure you are signed in with the Google account used for Cloud Backup.</li>
+        <li>Tap <strong>Delete account</strong> and confirm.</li>
+      </ol>
+      <p>When you confirm, the app calls our authenticated deletion endpoint. That endpoint verifies your signed-in session, deletes cloud spending entries and periods linked to your user id, deletes the authentication account, then the app clears local spending data on the device. Cancel any Cloud Backup subscription in Google Play separately if you still have one.</p>
+
+      <h2>What gets deleted for a full account deletion</h2>
       <ul>
         <li>Your Cloud Backup authentication account associated with RatePocket (Google/Supabase sign-in for this app).</li>
         <li>Cloud-stored spending entries and spending periods linked to that account on our backend.</li>
+        <li>Local spending data on the device that confirmed in-app deletion (the app resets that device’s spending history).</li>
       </ul>
-      <p>We will delete this associated user data after verifying your request. Freezing an account is not used as a substitute for deletion.</p>
+      <p>We do not freeze or disable accounts as a substitute for deletion.</p>
 
-      <h2>What is not removed automatically by a cloud deletion request</h2>
+      <h2>What is not removed automatically</h2>
       <ul>
-        <li><strong>Local data on your phone</strong> (spends, salary/period settings, preferences) remains until you clear app storage or uninstall RatePocket.</li>
-        <li><strong>Google Play purchase records</strong> may be retained by Google under Google Play policies. Entitlements are managed through Play Billing.</li>
-        <li><strong>Advertising / device identifiers</strong> processed by Google Mobile Ads are handled under Google’s ads systems; uninstalling and resetting advertising ID on your device are additional controls.</li>
+        <li><strong>Google Play purchase and subscription records</strong> retained by Google under Google Play policies. Cancel subscriptions in Google Play.</li>
+        <li><strong>Advertising / device identifiers</strong> processed by Google Mobile Ads under Google’s ads systems. Uninstalling and resetting the advertising ID on your device are additional controls.</li>
+        <li><strong>Receipt-scan quota counters</strong> keyed by on-device install identifier (not by Google account). These are not the same as a Cloud Backup account and are not automatically erased by account deletion. Ask support if you want related records reviewed.</li>
+        <li><strong>OpenAI processing of receipt images</strong> you previously scanned — subject to OpenAI’s API retention practices (see the <a href="../privacy/">Privacy Policy</a>).</li>
+        <li><strong>Support email correspondence</strong> kept as needed for ordinary business records.</li>
       </ul>
 
-      <h2>How to request deletion by email</h2>
-      <p>Tap the button below to open an email to <strong>support.tradali@gmail.com</strong> with a pre-filled deletion request. Include the Google account email you used to sign in for Cloud Backup so we can locate your data.</p>
+      <h2>Web / email deletion (if you uninstalled the app)</h2>
+      <p>Tap the button below to email <strong>support.tradali@gmail.com</strong> with a pre-filled deletion request. Include the Google account email you used to sign in for Cloud Backup so we can locate your data.</p>
 
       <div class="legal-actions">
         <a
           class="btn btn-danger"
           href="mailto:support.tradali@gmail.com?subject=RatePocket%20account%20deletion%20request&body=Hello%20Tradali%20%2F%20RatePocket%20team%2C%0D%0A%0D%0AI%20am%20requesting%20permanent%20deletion%20of%20my%20RatePocket%20Cloud%20Backup%20account%20and%20all%20associated%20cloud%20data.%0D%0A%0D%0AGoogle%20account%20email%20used%20to%20sign%20in%3A%20%5Breplace%20with%20your%20email%5D%0D%0AAndroid%20package%3A%20com.tradali.calculator%0D%0A%0D%0APlease%20confirm%20when%20deletion%20is%20complete.%0D%0A%0D%0AThank%20you.%0D%0A"
         >
-          <i class="ph-duotone ph-envelope-simple"></i>
           Request account deletion by email
         </a>
         <a class="btn btn-outline" href="mailto:support.tradali@gmail.com">Contact support</a>
@@ -72,15 +92,12 @@
       <h2>What happens after you email us</h2>
       <ol style="padding-left:20px;margin:0 0 12px;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:15px;line-height:1.65">
         <li>We verify the request (we may ask you to confirm ownership of the Google account used for Cloud Backup).</li>
-        <li>We delete the associated RatePocket cloud account data from our systems.</li>
-        <li>We reply to confirm completion. We aim to complete requests within <strong>30 days</strong> (often sooner).</li>
+        <li>We delete the associated RatePocket cloud account and linked cloud spending data from our systems.</li>
+        <li>We reply to confirm completion. For email requests, we aim to complete deletion within <strong>30 days</strong> after we can verify ownership (often sooner). In-app deletion for a signed-in user is processed immediately by the app’s deletion endpoint when the request succeeds.</li>
       </ol>
 
       <h2>Local-only users (no Cloud Backup sign-in)</h2>
-      <p>If you never signed in, there is no cloud account to delete. To remove local RatePocket data from a device, clear the app’s storage in Android settings or uninstall the app.</p>
-
-      <h2>In the app</h2>
-      <p>You can sign out of Cloud Backup from RatePocket settings. Sign-out keeps local data on the device and stops sync for that session. For full cloud account deletion, use the email request on this page.</p>
+      <p>If you never signed in, there is no cloud account to delete. To remove local RatePocket data from a device, use Settings → Clear data, clear the app’s storage in Android settings, or uninstall the app.</p>
 
       <h2>Privacy Policy</h2>
       <p>For full details on data collection and use, read the <a href="../privacy/">RatePocket Privacy Policy</a>.</p>

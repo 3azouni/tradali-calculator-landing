@@ -192,6 +192,28 @@ img {
   max-width: 560px;
 }
 
+.hero-brand {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.hero-access {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+.hero-access a {
+  color: var(--purple-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -239,6 +261,69 @@ img {
   color: var(--text-body);
   margin: 0;
   max-width: 480px;
+}
+
+.hero-sub a {
+  color: var(--purple-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-purpose {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-muted-1);
+  margin: 0;
+  max-width: 520px;
+  font-weight: 600;
+}
+
+#how-it-works {
+  scroll-margin-top: 80px;
+}
+
+.how-it-works .section-head {
+  margin-bottom: 28px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.how-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 20px;
+}
+
+.how-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+
+.how-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero-cta {

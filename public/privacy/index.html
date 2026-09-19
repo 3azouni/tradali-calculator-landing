@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — RatePocket</title>
-  <meta name="description" content="Privacy Policy for RatePocket by Tradali — what data we collect, how it is used, and how you can delete it.">
+  <meta name="description" content="Privacy Policy for RatePocket by Tradali — local data, Google sign-in for Cloud Backup, AdMob, RevenueCat/Play Billing, AI receipt scanning, retention, and deletion.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0A0A0E">
   <link rel="icon" type="image/png" href="../brand/logo-r.png">
@@ -18,89 +18,131 @@
   <div class="page">
     <nav class="nav">
       <a class="brand" href="../" aria-label="RatePocket home">
-        <img class="brand-logo" src="../brand/logo-r.png" width="28" height="28" alt="" decoding="async">
+        <img class="brand-logo" src="../brand/ratepocket-mark-purple.svg" width="28" height="28" alt="RatePocket logo" decoding="async">
         <span class="brand-name">RatePocket</span>
       </a>
       <div class="nav-links">
+        <a href="../terms/">Terms</a>
         <a href="./">Privacy</a>
         <a href="../delete-account/">Delete account</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="mailto:support.tradali@gmail.com">Contact</a>
+      <a class="btn btn-primary btn-sm" href="mailto:support.tradali@gmail.com">Support</a>
     </nav>
     <div class="shell">
 
     <article class="legal">
       <p class="legal-crumb"><a href="../">RatePocket</a> · Privacy Policy</p>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: September 17, 2026 · App: <strong>RatePocket</strong> (Android package <strong>com.tradali.calculator</strong>) · Developer: <strong>Tradali</strong></p>
+      <p class="updated">Last updated: September 20, 2026 · App: <strong>RatePocket</strong> (Android package <strong>com.tradali.calculator</strong>) · Support: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
 
       <div class="legal-card">
-        <p>RatePocket is built to work <strong>local-first</strong>. Most features work without an account. Optional sign-in with your <strong>Google</strong> account is only used for Cloud Backup. Advertising and purchases use Google services as described below.</p>
+        <p><strong>RatePocket</strong> is an Android calculator, currency converter, and spending tracker. Most features are <strong>local-first</strong> and work without an account. This policy describes what the app and related website process — including optional Google Cloud Backup, Google Play purchases (via RevenueCat), advertising (AdMob), and optional AI receipt scanning.</p>
+        <p style="margin-top:12px;margin-bottom:0">Not all data stays only on your device. Advertising, purchases, optional Cloud Backup, optional receipt scans, and support emails involve network transmission as described below.</p>
       </div>
 
       <h2>1. Who we are</h2>
-      <p>RatePocket is published by Tradali. Contact: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a>. Studio site: <a href="https://tradali.com/">tradali.com</a>. Product site: <a href="https://ratepocket.tradali.com/">ratepocket.tradali.com</a>.</p>
+      <p>RatePocket is operated by an individual developer using the name <strong>Tradali</strong>. Tradali is a developer/publishing name, not a registered company. Product site: <a href="https://ratepocket.tradali.com/">ratepocket.tradali.com</a>. Brand site: <a href="https://tradali.com/">tradali.com</a>. Contact: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a>.</p>
+      <p>For privacy or deletion requests, email the address above. We will use that channel to identify your request and respond.</p>
 
       <h2>2. Information we process</h2>
+
+      <h3>2.1 On-device app data (local)</h3>
+      <p>Stored on your device (for example via on-device storage) and used to run the app:</p>
       <ul>
-        <li><strong>On-device app data</strong> — calculator state, selected currencies, salary/budget, pay period, spending entries, export entitlement flags, and similar preferences stored locally on your device (for example via on-device storage). This data stays on your device unless you enable Cloud Backup.</li>
-        <li><strong>Optional account (Cloud Backup)</strong> — if you choose Cloud Backup, you sign in directly with your <strong>Google</strong> account. We receive the account identifiers Google provides for that sign-in (such as your Google user ID and the email associated with it) so we can identify your backup and keep it synced across your devices.</li>
-        <li><strong>Cloud backup content</strong> — when Cloud Backup is enabled, spending entries and spending periods you create may be stored on our backend (Supabase) and linked to your signed-in user id. Fields can include amounts, currencies, dates/times, titles, categories, notes, and period settings.</li>
-        <li><strong>Purchases</strong> — Lifetime Export Pass and Cloud Backup subscriptions are processed by the platform billing system (Google Play). We receive purchase/entitlement status needed to unlock features; we do not receive your full payment card details.</li>
-        <li><strong>Advertising</strong> — the free experience may show ads via Google Mobile Ads (AdMob). Google may collect device and advertising identifiers (including the Android Advertising ID where available), approximate location derived from IP address, app interactions, and diagnostic data under Google’s policies to serve and measure ads.</li>
-        <li><strong>Diagnostics / support</strong> — if you email us, we process the content of your message and any account details you include so we can help you.</li>
+        <li>Calculator / converter preferences (amounts, selected currencies)</li>
+        <li>Salary/budget, income label, pay period dates, spending entries (amounts, currencies, dates/times, titles/notes, categories/groups)</li>
+        <li>Export entitlement flags, export credits, and similar preference flags stored locally</li>
+        <li>An install identifier used to enforce receipt-scan quotas (see below)</li>
       </ul>
+      <p>Local spending data stays on the device unless you enable Cloud Backup or use features that upload content (receipt scan).</p>
+
+      <h3>2.2 Optional Google account (Cloud Backup only)</h3>
+      <p>Google sign-in is <strong>not required</strong> for calculator, conversion, or local spending. Cloud Backup requires an active subscription and Google sign-in. If you enable Cloud Backup, you sign in with Google (via Supabase Auth / Google OAuth). We receive account identifiers Google provides for that sign-in (such as Google user id and associated email) so we can authenticate you and associate Cloud Backup data with your account.</p>
+
+      <h3>2.3 Cloud Backup content</h3>
+      <p>When Cloud Backup is active and you are signed in, spending entries and spending periods may be stored on our backend (<strong>Supabase</strong>), linked to your authenticated user id. Fields can include amounts, currencies, dates/times, titles, categories, notes, and period settings.</p>
+
+      <h3>2.4 Purchases and entitlements</h3>
+      <p>In-app purchases and subscriptions are sold through <strong>Google Play Billing</strong>. The app uses <strong>RevenueCat</strong> to read purchase/entitlement status (for example Lifetime Export Pass and Cloud Backup). We receive entitlement status needed to unlock features. We do not receive your full payment card details. Google processes payments under Google’s terms.</p>
+
+      <h3>2.5 Advertising (AdMob)</h3>
+      <p>The free experience may show ads via <strong>Google Mobile Ads (AdMob)</strong>, including banner, native, rewarded, rewarded interstitial, and app-open formats where enabled. Google may process device and advertising identifiers (including the Android Advertising ID where available), IP-derived approximate location, app interactions, and diagnostic data under Google’s policies to serve and measure ads.</p>
+      <p>Where required (for example EEA/UK/Switzerland), the app uses Google’s User Messaging Platform (UMP) to request consent / privacy choices before personalized ad requests. You may reopen privacy options from Settings → Ad privacy options when the SDK indicates that an entry point is required for your region.</p>
+
+      <h3>2.6 Optional AI receipt scanning</h3>
+      <p>If you choose Camera or Gallery scan when adding a spend, the app first shows a disclosure. If you cancel, no image is uploaded. If you continue, the selected receipt image is sent to our <strong>Supabase Edge Function</strong>, which forwards the image to <strong>OpenAI</strong> vision models to extract suggested line items (merchant/date/currency/items). You review and edit results before saving spends.</p>
+      <ul>
+        <li><strong>What we send for a scan:</strong> the selected image and its MIME type, plus an install identifier and a Cloud Backup entitlement flag used only to choose the correct scan quota.</li>
+        <li><strong>What RatePocket stores on our backend after a scan:</strong> a scan-count record keyed by install identifier and quota period (lifetime free bucket, or calendar month for Cloud Backup). We do <strong>not</strong> keep a permanent gallery of receipt photos on our servers. The image is handled for that request; our code does not write receipt images into a database or object store.</li>
+        <li><strong>What OpenAI receives:</strong> the image content as part of the analysis request. Under OpenAI’s current API data controls, API inputs and outputs are not used to train OpenAI models by default (unless an organization opts in). OpenAI may retain content for abuse monitoring for up to 30 days unless a customer has approved Zero Data Retention or similar controls. RatePocket does not claim Zero Data Retention for this integration. See OpenAI’s documentation: <a href="https://developers.openai.com/api/docs/guides/your-data" rel="noopener noreferrer" target="_blank">Data controls in the OpenAI platform</a> and <a href="https://help.openai.com/en/articles/5722486-api-data-usage-policies" rel="noopener noreferrer" target="_blank">API data usage policies</a>.</li>
+        <li><strong>Quotas (current product):</strong> free installs — 3 lifetime scans; Cloud Backup subscribers — 75 scans per calendar month.</li>
+      </ul>
+
+      <h3>2.7 Exchange rates</h3>
+      <p>The app fetches currency rate data from network rate providers so conversions can update. This involves ordinary network requests from your device; it is not Cloud Backup.</p>
+
+      <h3>2.8 Diagnostics and support</h3>
+      <p>If you email support, we process the content of your message and any account details you include. Billing/SDK logs may appear on your device or in developer tooling during troubleshooting; we do not operate a separate analytics product beyond what AdMob, RevenueCat, Supabase, and OpenAI provide for their services.</p>
 
       <h2>3. How we use information</h2>
       <ul>
-        <li>To provide calculator, currency conversion, spending tracking, export, and Cloud Backup features.</li>
-        <li>To authenticate optional Cloud Backup sign-in with Google and sync your data across devices you use with the same account.</li>
-        <li>To unlock paid features you purchase.</li>
-        <li>To show ads in the free experience (where enabled).</li>
-        <li>To respond to support and account/data deletion requests.</li>
+        <li>Provide calculator, conversion, spending tracking, export, Cloud Backup, and optional receipt-scan features</li>
+        <li>Authenticate optional Cloud Backup with Google and sync your backup across devices you use with the same account</li>
+        <li>Unlock paid features you purchase through Google Play</li>
+        <li>Show ads and honor consent / privacy choices where required</li>
+        <li>Enforce receipt-scan quotas and respond to support / deletion requests</li>
       </ul>
-      <p>We do <strong>not</strong> use your Google account identifiers or Cloud Backup content to serve or personalize ads.</p>
+      <p>We do not sell your personal information. We do not use your Cloud Backup spending content to personalize ads.</p>
 
-      <h2>4. Sharing</h2>
-      <p>We do not sell your personal information. We use service providers that process data on our behalf or as independent controllers for their services:</p>
+      <h2>4. Sharing / service providers</h2>
+      <p>We use processors or independent platforms as needed to run the product:</p>
       <ul>
-        <li><strong>Google</strong> — Google Sign-In (when you choose it), Google Play Billing, and Google Mobile Ads / AdMob.</li>
-        <li><strong>Supabase</strong> — backend storage for your Cloud Backup content (spending entries and periods), keyed to your Google-authenticated user id.</li>
+        <li><strong>Google</strong> — Google Sign-In (optional Cloud Backup), Google Play Billing, AdMob / UMP</li>
+        <li><strong>RevenueCat</strong> — purchase/entitlement status bridging Google Play purchases to the app</li>
+        <li><strong>Supabase</strong> — authentication session backend, Cloud Backup storage, receipt-scan edge function and quota counters</li>
+        <li><strong>OpenAI</strong> — optional receipt image analysis when you start a scan</li>
       </ul>
-      <p>These providers process data under their own terms and privacy policies.</p>
+      <p>These providers process data under their own terms and privacy policies. Provider policies may change; the links in this policy are for their current published documentation.</p>
 
       <h2>5. Retention</h2>
       <ul>
-        <li><strong>Local data</strong> remains on your device until you clear app storage, uninstall the app, or otherwise delete it on-device.</li>
-        <li><strong>Cloud Backup data</strong> is retained while your Cloud Backup account/data exists, or until you request deletion.</li>
-        <li><strong>Support emails</strong> are kept as long as needed to handle your request and for ordinary business records.</li>
+        <li><strong>Local data</strong> — until you clear app storage, use in-app clear/delete controls, or uninstall (subject to OS behavior).</li>
+        <li><strong>Cloud Backup data</strong> — while your Cloud Backup account/data exists, or until you delete the account in-app, request deletion via our <a href="../delete-account/">Delete account</a> page, or email support.</li>
+        <li><strong>Receipt images</strong> — transmitted for the scan request as described above. RatePocket does not operate a permanent receipt photo library. OpenAI’s retention for API abuse monitoring (and any Zero Data Retention eligibility) is governed by OpenAI’s terms, not by a RatePocket-controlled gallery.</li>
+        <li><strong>Install identifiers and scan-quota counters</strong> — the install id is stored on the device for as long as app storage remains. Matching quota counters on our backend remain so limits can be enforced. Account deletion removes Cloud Backup account data; it does not automatically erase install-id quota counters, because those counters are tied to the device install id rather than the Google account. You may ask support to review related records when you request deletion.</li>
+        <li><strong>Support emails</strong> — as needed to handle your request and ordinary business records.</li>
+        <li><strong>Google / RevenueCat</strong> — subject to those providers’ retention practices for their services.</li>
       </ul>
 
       <h2>6. Your choices and deletion</h2>
       <ul>
-        <li>You can use RatePocket without creating an account.</li>
-        <li>You can sign out of Cloud Backup in the app; local data remains on the device.</li>
-        <li>You can request deletion of your Cloud Backup account and associated cloud data. See our <a href="../delete-account/">Account &amp; data deletion</a> page, or email <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a>. Freezing an account is not used as a substitute for deletion.</li>
-        <li>Uninstalling the app removes local on-device app data from that device (subject to your OS behavior).</li>
+        <li>Use RatePocket without creating an account.</li>
+        <li>Decline optional receipt scans; enter spends manually.</li>
+        <li><strong>Sign out</strong> of Cloud Backup in Settings — local data remains on the device; sync stops for that session.</li>
+        <li><strong>Clear data</strong> in Settings — removes spending history on the device, and also clears cloud spending data if you are signed in; purchases and sign-in stay.</li>
+        <li><strong>Delete account</strong> in Settings (when signed in) — permanently deletes your Cloud Backup authentication account and associated cloud spending data, then resets local spending data on that device. See the exact path on the <a href="../delete-account/">Delete account</a> page. You can also request deletion by email from that page.</li>
+        <li>Manage or cancel Play subscriptions in Google Play subscription settings (separate from account deletion).</li>
+        <li>Where shown, use Ad privacy options / system advertising settings applicable to your region.</li>
       </ul>
 
       <h2>7. Security</h2>
-      <p>We handle personal and sensitive user data securely. Cloud Backup and related network traffic use modern cryptography in transit (HTTPS).</p>
+      <p>Network features (Cloud Backup, receipt scan, rates, billing entitlement checks) use HTTPS in transit. No security measure is perfect; protect your device and Google account.</p>
 
       <h2>8. Children</h2>
       <p>RatePocket is not directed at children under 13 (or the minimum age required in your country). We do not knowingly collect personal information from children.</p>
 
       <h2>9. International processing</h2>
-      <p>Our service providers may process data in countries other than yours. Where required, we rely on appropriate safeguards provided by those providers.</p>
+      <p>Providers may process data in countries other than yours. Where required, we rely on appropriate mechanisms offered by those providers.</p>
 
       <h2>10. Changes</h2>
-      <p>We may update this policy as the app evolves. The “Last updated” date at the top will change when we do. Continued use after an update means you accept the revised policy.</p>
+      <p>We may update this policy as the app evolves. The “Last updated” date will change when we do. Continued use after an update means you accept the revised policy where permitted by law.</p>
 
       <h2>11. Contact</h2>
-      <p>Questions about privacy or data: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
+      <p>Privacy questions or deletion requests: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
 
       <div class="legal-actions">
         <a class="btn btn-primary" href="../delete-account/">Account &amp; data deletion</a>
+        <a class="btn btn-outline" href="../terms/">Terms of Service</a>
         <a class="btn btn-outline" href="../">Back to RatePocket</a>
       </div>
     </article>
