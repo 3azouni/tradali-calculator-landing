@@ -36,6 +36,15 @@ export default {
     }
 
     if (isProductHost(url.hostname) || url.hostname.endsWith(".workers.dev")) {
+      // Keep OAuth callback off the marketing SPA (exact asset: /auth/callback/).
+      const path = url.pathname.replace(/\/+$/, "") || "/";
+      if (path === "/auth/callback") {
+        const bridge = new URL(url.toString());
+        bridge.pathname = "/auth/callback/";
+        if (bridge.pathname !== url.pathname) {
+          return Response.redirect(bridge.toString(), 302);
+        }
+      }
       return env.ASSETS.fetch(request);
     }
 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Returning to RatePocket…</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="OAuth bridge for the RatePocket app. This is not the product homepage.">
+  <link rel="icon" href="/brand/logo-r.png">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: #0a0a0e;
+      color: #f4f4f7;
+    }
+    .card {
+      max-width: 28rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+    p {
+      margin: 0 0 12px;
+      line-height: 1.5;
+      color: #b8b8c4;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #a78bfa;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Returning to RatePocket…</h1>
+    <p id="status">Finishing Google sign-in and opening the app.</p>
+    <p id="hint" hidden>
+      If nothing opens, <a id="deep" href="#">tap here to return to RatePocket</a>,
+      or go back to the app window.
+    </p>
+  </main>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var hash = window.location.hash || '';
+      var appOrigin = params.get('app_origin');
+      var hasAuth =
+        /access_token=|refresh_token=/.test(hash) ||
+        params.has('code') ||
+        params.has('access_token');
+
+      function cleanSearch() {
+        var next = new URLSearchParams(window.location.search);
+        next.delete('app_origin');
+        var q = next.toString();
+        return q ? '?' + q : '';
+      }
+
+      function setStatus(text) {
+        var el = document.getElementById('status');
+        if (el) el.textContent = text;
+      }
+
+      function showHint(deepHref) {
+        var hint = document.getElementById('hint');
+        var deep = document.getElementById('deep');
+        if (deep) deep.href = deepHref;
+        if (hint) hint.hidden = false;
+      }
+
+      // Web Expo app: bridge tokens back to the app origin (never stay on marketing HTML).
+      if (appOrigin && hasAuth) {
+        try {
+          var originUrl = new URL(appOrigin);
+          var host = originUrl.hostname;
+          var allowed =
+            (originUrl.protocol === 'http:' || originUrl.protocol === 'https:') &&
+            (host === 'localhost' || host === '127.0.0.1');
+          if (allowed) {
+            setStatus('Sending you back to the RatePocket app…');
+            window.location.replace(
+              originUrl.origin + '/auth/callback' + cleanSearch() + hash
+            );
+            return;
+          }
+        } catch (e) {
+          /* fall through to deep link */
+        }
+      }
+
+      // Native app: deep link with the same auth payload.
+      var deepLink = 'ratepocket://auth/callback' + cleanSearch() + hash;
+      showHint(deepLink);
+
+      if (hasAuth) {
+        setStatus('Opening the RatePocket app…');
+        window.location.replace(deepLink);
+        return;
+      }
+
+      setStatus('No sign-in data found. You can close this tab and try again in the app.');
+      showHint('https://ratepocket.tradali.com/');
+      var deep = document.getElementById('deep');
+      if (deep) deep.textContent = 'Back to RatePocket homepage';
+    })();
+  </script>
+</body>
+</html>

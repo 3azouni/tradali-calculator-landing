@@ -9,6 +9,7 @@ Product landing for **RatePocket** (currency calculator & expense tracker) by **
 - **Terms of Service:** https://ratepocket.tradali.com/terms/
 - **Privacy Policy:** https://ratepocket.tradali.com/privacy/
 - **Delete account / data:** https://ratepocket.tradali.com/delete-account/
+- **OAuth bridge (not the app):** https://ratepocket.tradali.com/auth/callback/ — forwards Google sign-in tokens to the RatePocket app (`ratepocket://` or local Expo web). This is not the product UI.
 - Support: support.tradali@gmail.com
 - Legacy paths redirect to RatePocket:
   - `tradali.com/calculator` → `ratepocket.tradali.com`
