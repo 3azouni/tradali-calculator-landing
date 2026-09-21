@@ -2,7 +2,7 @@
   "name": "tradali-calculator-landing",
   "private": true,
   "version": "1.0.0",
-  "description": "Tradali currency calculator & expense tracker product landing — calculator.tradali.com",
+  "description": "RatePocket product landing — ratepocket.tradali.com",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",

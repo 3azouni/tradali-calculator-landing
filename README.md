@@ -5,7 +5,7 @@ Product landing for **RatePocket** (currency calculator & expense tracker) by **
 ## URLs
 
 - **Primary:** https://ratepocket.tradali.com/
-- **Join Android testing:** https://play.google.com/apps/testing/com.tradali.calculator
+- **Get on Google Play:** https://play.google.com/store/apps/details?id=com.tradali.calculator
 - **Terms of Service:** https://ratepocket.tradali.com/terms/
 - **Privacy Policy:** https://ratepocket.tradali.com/privacy/
 - **Delete account / data:** https://ratepocket.tradali.com/delete-account/
