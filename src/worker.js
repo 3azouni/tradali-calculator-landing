@@ -36,11 +36,11 @@ export default {
     }
 
     if (isProductHost(url.hostname) || url.hostname.endsWith(".workers.dev")) {
-      // Keep OAuth callback off the marketing SPA (exact asset: /auth/callback/).
+      // Keep OAuth / invite bridges off the marketing SPA (exact assets under /…/).
       const path = url.pathname.replace(/\/+$/, "") || "/";
-      if (path === "/auth/callback") {
+      if (path === "/auth/callback" || path === "/invite") {
         const bridge = new URL(url.toString());
-        bridge.pathname = "/auth/callback/";
+        bridge.pathname = `${path}/`;
         if (bridge.pathname !== url.pathname) {
           return Response.redirect(bridge.toString(), 302);
         }

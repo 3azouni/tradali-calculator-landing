@@ -1,6 +1,6 @@
 # RatePocket Landing
 
-Product landing for **RatePocket** (currency calculator & expense tracker) by **Tradali**.
+Product landing for **RatePocket** (currency calculator, expense tracker, and Family / Group shared budgets) by **Tradali**.
 
 ## URLs
 
@@ -10,10 +10,15 @@ Product landing for **RatePocket** (currency calculator & expense tracker) by **
 - **Privacy Policy:** https://ratepocket.tradali.com/privacy/
 - **Delete account / data:** https://ratepocket.tradali.com/delete-account/
 - **OAuth bridge (not the app):** https://ratepocket.tradali.com/auth/callback/ — forwards Google sign-in tokens to the RatePocket app (`ratepocket://` or local Expo web). This is not the product UI.
+- **Family invite bridge (not the app):** https://ratepocket.tradali.com/invite/?id=… — opens `ratepocket://family/invite?id=…` (or local Expo web via `app_origin`). This is not the product UI.
 - Support: support.tradali@gmail.com
 - Legacy paths redirect to RatePocket:
   - `tradali.com/calculator` → `ratepocket.tradali.com`
   - `calculator.tradali.com` → `ratepocket.tradali.com`
+
+## Marketing screenshots
+
+Personal screenshots live in `public/screenshots/01-…` through `15-…`. Family marketing frames (`16-…` through `23-…`) are rasterized from Dark Family design SVGs in the App repo (`design/RatePocket-Family-Separate-SVG-Pages/Dark/`).
 
 ## Docs
 

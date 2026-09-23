@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — RatePocket</title>
-  <meta name="description" content="Privacy Policy for RatePocket by Tradali — local data, Google sign-in for Cloud Backup, AdMob, RevenueCat/Play Billing, AI receipt scanning, retention, and deletion.">
+  <meta name="description" content="Privacy Policy for RatePocket by Tradali — local data, Google sign-in for Cloud Backup and Family / Group, AdMob, RevenueCat/Play Billing, AI receipt scanning, retention, and deletion.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0A0A0E">
   <link rel="icon" type="image/png" href="../brand/logo-r.png">
@@ -33,11 +33,11 @@
     <article class="legal">
       <p class="legal-crumb"><a href="../">RatePocket</a> · Privacy Policy</p>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: September 21, 2026 · App: <strong>RatePocket</strong> (Android package <strong>com.tradali.calculator</strong>) · Support: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
+      <p class="updated">Last updated: September 23, 2026 · App: <strong>RatePocket</strong> (Android package <strong>com.tradali.calculator</strong>) · Support: <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
 
       <div class="legal-card">
-        <p><strong>RatePocket</strong> is an Android calculator, currency converter, and spending tracker. Most features are <strong>local-first</strong> and work without an account. This policy describes what the app and related website process — including optional Google Cloud Backup, Google Play purchases (via RevenueCat), advertising (AdMob), and optional AI receipt scanning.</p>
-        <p style="margin-top:12px;margin-bottom:0">Not all data stays only on your device. Advertising, purchases, optional Cloud Backup, optional receipt scans, and support emails involve network transmission as described below.</p>
+        <p><strong>RatePocket</strong> is an Android calculator, currency converter, and spending tracker. Most personal features are <strong>local-first</strong> and work without an account. This policy describes what the app and related website process — including optional Google Cloud Backup, optional Family / Group shared workspaces, Google Play purchases (via RevenueCat), advertising (AdMob), and optional AI receipt scanning.</p>
+        <p style="margin-top:12px;margin-bottom:0">Not all data stays only on your device. Advertising, purchases, optional Cloud Backup, optional Family / Group, optional receipt scans, invite emails, and support emails involve network transmission as described below.</p>
       </div>
 
       <h2>1. Who we are</h2>
@@ -54,16 +54,19 @@
         <li>Export entitlement flags, export credits, and similar preference flags stored locally</li>
         <li>An install identifier used to enforce receipt-scan quotas (see below)</li>
       </ul>
-      <p>Local spending data stays on the device unless you enable Cloud Backup or use features that upload content (receipt scan).</p>
+      <p>Local personal spending data stays on the device unless you enable Cloud Backup or use features that upload content (receipt scan). Family / Group shared ledgers are stored on our backend when you create or join a Family workspace.</p>
 
-      <h3>2.2 Optional Google account (Cloud Backup only)</h3>
-      <p>Google sign-in is <strong>not required</strong> for calculator, conversion, or local spending. Cloud Backup requires an active subscription and Google sign-in. If you enable Cloud Backup, you sign in with Google (via Supabase Auth / Google OAuth). We receive account identifiers Google provides for that sign-in (such as Google user id and associated email) so we can authenticate you and associate Cloud Backup data with your account.</p>
+      <h3>2.2 Optional Google account (Cloud Backup and Family / Group)</h3>
+      <p>Google sign-in is <strong>not required</strong> for calculator, conversion, or local personal spending. Cloud Backup and Family / Group require Google sign-in (via Supabase Auth / Google OAuth). We receive account identifiers Google provides for that sign-in (such as Google user id and associated email) so we can authenticate you, associate Cloud Backup data with your account, and manage Family membership and invites.</p>
 
       <h3>2.3 Cloud Backup content</h3>
-      <p>When Cloud Backup is active and you are signed in, spending entries and spending periods may be stored on our backend (<strong>Supabase</strong>), linked to your authenticated user id. Fields can include amounts, currencies, dates/times, titles, categories, notes, and period settings.</p>
+      <p>When Cloud Backup is active and you are signed in, personal spending entries and spending periods may be stored on our backend (<strong>Supabase</strong>), linked to your authenticated user id. Fields can include amounts, currencies, dates/times, titles, categories, notes, and period settings.</p>
+
+      <h3>2.3a Family / Group content</h3>
+      <p>When you create or join a Family / Group workspace, we store workspace metadata (name, currency, time zone, seat limits), membership and roles (Owner, Admin, Member), invitation emails and invitation status, shared spending entries and period settings for that workspace, attribution (who added or last edited an entry), and an activity / audit log of Family events. Personal workspace data is never mixed into a Family ledger. Invite emails are sent to the address the Owner provides so the invitee can accept with the matching Google account.</p>
 
       <h3>2.4 Purchases and entitlements</h3>
-      <p>In-app purchases and subscriptions are sold through <strong>Google Play Billing</strong>. The app uses <strong>RevenueCat</strong> to read purchase/entitlement status (for example Lifetime Export Pass and Cloud Backup). We receive entitlement status needed to unlock features. We do not receive your full payment card details. Google processes payments under Google’s terms.</p>
+      <p>In-app purchases and subscriptions are sold through <strong>Google Play Billing</strong>. The app uses <strong>RevenueCat</strong> to read purchase/entitlement status (for example Lifetime Export Pass, Cloud Backup, and Family / Group). We receive entitlement status needed to unlock features. We do not receive your full payment card details. Google processes payments under Google’s terms.</p>
 
       <h3>2.5 Advertising (AdMob)</h3>
       <p>The free experience may show ads via <strong>Google Mobile Ads (AdMob)</strong>, including banner, native, rewarded, rewarded interstitial, and app-open formats where enabled. Google may process device and advertising identifiers (including the Android Advertising ID where available), IP-derived approximate location, app interactions, and diagnostic data under Google’s policies to serve and measure ads.</p>
@@ -86,20 +89,22 @@
 
       <h2>3. How we use information</h2>
       <ul>
-        <li>Provide calculator, conversion, spending tracking, export, Cloud Backup, and optional receipt-scan features</li>
-        <li>Authenticate optional Cloud Backup with Google and sync your backup across devices you use with the same account</li>
+        <li>Provide calculator, conversion, spending tracking, export, Cloud Backup, Family / Group, and optional receipt-scan features</li>
+        <li>Authenticate optional Cloud Backup and Family / Group with Google; sync personal backups and shared Family ledgers across devices you use with the same account</li>
+        <li>Send Family invitation emails and enforce seat / workspace caps</li>
         <li>Unlock paid features you purchase through Google Play</li>
         <li>Show ads and honor consent / privacy choices where required</li>
         <li>Enforce receipt-scan quotas and respond to support / deletion requests</li>
       </ul>
-      <p>We do not sell your personal information. We do not use your Cloud Backup spending content to personalize ads.</p>
+      <p>We do not sell your personal information. We do not use your Cloud Backup or Family spending content to personalize ads. Other members of a Family workspace can see shared ledger entries and activity for that workspace according to their role.</p>
 
       <h2>4. Sharing / service providers</h2>
       <p>We use processors or independent platforms as needed to run the product:</p>
       <ul>
-        <li><strong>Google</strong> — Google Sign-In (optional Cloud Backup), Google Play Billing, AdMob / UMP</li>
+        <li><strong>Google</strong> — Google Sign-In (optional Cloud Backup and Family / Group), Google Play Billing, AdMob / UMP</li>
         <li><strong>RevenueCat</strong> — purchase/entitlement status bridging Google Play purchases to the app</li>
-        <li><strong>Supabase</strong> — authentication session backend, Cloud Backup storage, receipt-scan edge function and quota counters</li>
+        <li><strong>Supabase</strong> — authentication session backend, Cloud Backup storage, Family / Group workspace data, invite email edge function, receipt-scan edge function and quota counters</li>
+        <li><strong>Resend</strong> (or similar email provider) — delivery of Family invitation emails when an Owner sends an invite</li>
         <li><strong>OpenAI</strong> — optional receipt image analysis when you start a scan</li>
       </ul>
       <p>These providers process data under their own terms and privacy policies. Provider policies may change; the links in this policy are for their current published documentation.</p>
@@ -108,6 +113,7 @@
       <ul>
         <li><strong>Local data</strong> — until you clear app storage, use in-app clear/delete controls, or uninstall (subject to OS behavior).</li>
         <li><strong>Cloud Backup data</strong> — while your Cloud Backup account/data exists, or until you delete the account in-app, request deletion via our <a href="../delete-account/">Delete account</a> page, or email support.</li>
+        <li><strong>Family / Group data</strong> — while the workspace exists and you remain a member. Leaving a Family removes your membership; deleting a Family (Owner) removes that workspace’s shared ledger and related records as implemented in the product. Account deletion removes your authentication account and associated memberships / owned Family data as described on the Delete account page.</li>
         <li><strong>Receipt images</strong> — transmitted for the scan request as described above. RatePocket does not operate a permanent receipt photo library. OpenAI’s retention for API abuse monitoring (and any Zero Data Retention eligibility) is governed by OpenAI’s terms, not by a RatePocket-controlled gallery.</li>
         <li><strong>Install identifiers and scan-quota counters</strong> — the install id is stored on the device for as long as app storage remains. Matching quota counters on our backend remain so limits can be enforced. Account deletion removes Cloud Backup account data; it does not automatically erase install-id quota counters, because those counters are tied to the device install id rather than the Google account. You may ask support to review related records when you request deletion.</li>
         <li><strong>Support emails</strong> — as needed to handle your request and ordinary business records.</li>
@@ -118,15 +124,16 @@
       <ul>
         <li>Use RatePocket without creating an account.</li>
         <li>Decline optional receipt scans; enter spends manually.</li>
-        <li><strong>Sign out</strong> of Cloud Backup in Settings — local data remains on the device; sync stops for that session.</li>
-        <li><strong>Clear data</strong> in Settings — removes spending history on the device, and also clears cloud spending data if you are signed in; purchases and sign-in stay.</li>
-        <li><strong>Delete account</strong> in Settings (when signed in) — permanently deletes your Cloud Backup authentication account and associated cloud spending data, then resets local spending data on that device. See the exact path on the <a href="../delete-account/">Delete account</a> page. You can also request deletion by email from that page.</li>
-        <li>Manage or cancel Play subscriptions in Google Play subscription settings (separate from account deletion).</li>
+        <li><strong>Sign out</strong> in Settings — local data remains on the device; Cloud Backup and Family sync stop for that session.</li>
+        <li><strong>Clear data</strong> in Settings — removes spending history on the device, and also clears cloud personal spending data if you are signed in; purchases and sign-in stay. Family memberships may need Leave / Delete Family actions in the app.</li>
+        <li><strong>Leave or delete a Family</strong> in Family settings — Leave removes you from that workspace; Delete Family (Owner only) removes the shared workspace after confirmation.</li>
+        <li><strong>Delete account</strong> in Settings (when signed in) — permanently deletes your authentication account and associated cloud personal spending data, then resets local spending data on that device. Family memberships and owned Groups are cleaned up as described on the <a href="../delete-account/">Delete account</a> page. You can also request deletion by email from that page.</li>
+        <li>Manage or cancel Play subscriptions (Cloud Backup and/or Family / Group) in Google Play subscription settings (separate from account deletion).</li>
         <li>Where shown, use Ad privacy options / system advertising settings applicable to your region.</li>
       </ul>
 
       <h2>7. Security</h2>
-      <p>Network features (Cloud Backup, receipt scan, rates, billing entitlement checks) use HTTPS in transit. No security measure is perfect; protect your device and Google account.</p>
+      <p>Network features (Cloud Backup, Family / Group, receipt scan, rates, billing entitlement checks, invite emails) use HTTPS in transit. No security measure is perfect; protect your device and Google account. Only invite people you trust into a Family workspace.</p>
 
       <h2>8. Children</h2>
       <p>RatePocket is not directed at children under 13 (or the minimum age required in your country). We do not knowingly collect personal information from children.</p>
