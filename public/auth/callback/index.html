@@ -37,6 +37,8 @@
     }
     a {
       color: #a78bfa;
+    }
+    a {
       font-weight: 700;
     }
   </style>
@@ -55,6 +57,7 @@
       var params = new URLSearchParams(window.location.search);
       var hash = window.location.hash || '';
       var appOrigin = params.get('app_origin');
+      var returnTo = params.get('return_to');
       var hasAuth =
         /access_token=|refresh_token=/.test(hash) ||
         params.has('code') ||
@@ -63,6 +66,7 @@
       function cleanSearch() {
         var next = new URLSearchParams(window.location.search);
         next.delete('app_origin');
+        next.delete('return_to');
         var q = next.toString();
         return q ? '?' + q : '';
       }
@@ -79,6 +83,51 @@
         if (hint) hint.hidden = false;
       }
 
+      // Keep in step with RatePocket App src/services/authReturnUrl.ts.
+      // Scheme prefix alone is not enough: exp:// and ratepocket:// must be the auth callback.
+      function isSafeReturnTo(raw) {
+        if (!raw) return false;
+        var u;
+        try {
+          u = new URL(raw);
+        } catch (e) {
+          return false;
+        }
+        var protocol = u.protocol.toLowerCase();
+        var path = (u.hostname + u.pathname).replace(/\/+$/, '').toLowerCase();
+        var callbackPath =
+          path === 'auth/callback' ||
+          path.slice(-13) === '/auth/callback' ||
+          /\/--\/auth\/callback$/i.test(u.pathname);
+        if (protocol === 'ratepocket:') {
+          return callbackPath || (u.hostname === 'auth' && u.pathname.replace(/\/+$/, '') === '/callback');
+        }
+        if (protocol === 'exp:' || protocol === 'exps:') {
+          return callbackPath || /auth\/callback$/i.test(u.hostname + u.pathname);
+        }
+        if (protocol === 'http:' || protocol === 'https:') {
+          var host = u.hostname.toLowerCase();
+          if (host !== 'localhost' && host !== '127.0.0.1') return false;
+          var httpPath = u.pathname.replace(/\/+$/, '') || '/';
+          return /\/auth\/callback$/i.test(httpPath);
+        }
+        return false;
+      }
+
+      function forwardTo(targetBase) {
+        setStatus('Sending you back to the RatePocket app…');
+        var join = targetBase.indexOf('?') >= 0 || targetBase.indexOf('#') >= 0 ? '' : '';
+        // Preserve auth query/hash from Supabase on the app return URL.
+        var dest = targetBase.split('#')[0].split('?')[0];
+        window.location.replace(dest + cleanSearch() + hash);
+      }
+
+      // Prefer explicit return_to (Expo Go exp://, ratepocket://, or localhost callback).
+      if (hasAuth && isSafeReturnTo(returnTo)) {
+        forwardTo(returnTo);
+        return;
+      }
+
       // Web Expo app: bridge tokens back to the app origin (never stay on marketing HTML).
       if (appOrigin && hasAuth) {
         try {
@@ -88,10 +137,7 @@
             (originUrl.protocol === 'http:' || originUrl.protocol === 'https:') &&
             (host === 'localhost' || host === '127.0.0.1');
           if (allowed) {
-            setStatus('Sending you back to the RatePocket app…');
-            window.location.replace(
-              originUrl.origin + '/auth/callback' + cleanSearch() + hash
-            );
+            forwardTo(originUrl.origin + '/auth/callback');
             return;
           }
         } catch (e) {
@@ -99,7 +145,7 @@
         }
       }
 
-      // Native app: deep link with the same auth payload.
+      // Native app fallback: deep link with the same auth payload.
       var deepLink = 'ratepocket://auth/callback' + cleanSearch() + hash;
       showHint(deepLink);
 

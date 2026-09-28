@@ -3,23 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RatePocket — Today Available, alone or as a Family</title>
-  <meta name="description" content="RatePocket shows how much you can spend today — personally and with Family / Group shared budgets, invites, roles, currency conversion, and optional Cloud Backup. Free on Android by Tradali.">
+  <title>RatePocket — Know what you can spend today</title>
+  <meta name="description" content="Local-first spending and income tracker for Android. Free core tools; optional Cloud Backup with owner-funded groups. English, French, Spanish, Arabic, and Urdu.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0D0D0D">
   <link rel="canonical" href="https://ratepocket.tradali.com/">
   <link rel="icon" type="image/png" href="brand/logo-r.png">
   <link rel="apple-touch-icon" href="brand/logo-r.png">
-  <meta property="og:title" content="RatePocket — Today Available, alone or as a Family">
-  <meta property="og:description" content="Personal daily allowance with carryover — plus Family / Group shared ledgers, invites, and sync. A calm money companion by Tradali.">
+  <meta property="og:title" content="RatePocket — Know what you can spend today">
+  <meta property="og:description" content="Track spend and income locally. Cloud Backup adds sync, ad-free use, receipt AI, and owner-funded shared groups. Languages: EN, FR, ES, AR, UR.">
   <meta property="og:url" content="https://ratepocket.tradali.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RatePocket">
-  <meta property="og:image" content="https://ratepocket.tradali.com/brand/logo-lockup.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://ratepocket.tradali.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RatePocket — Know what you can spend today">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RatePocket — Today Available, alone or as a Family">
-  <meta name="twitter:description" content="Personal Today Available and Family shared budgets. Calculator, convert, and track spending. A product by Tradali.">
-  <meta name="twitter:image" content="https://ratepocket.tradali.com/brand/logo-lockup.png">
+  <meta name="twitter:title" content="RatePocket — Know what you can spend today">
+  <meta name="twitter:description" content="Local-first money tools. Cloud Backup includes sync and owner-funded groups (7 seats). Free invitees.">
+  <meta name="twitter:image" content="https://ratepocket.tradali.com/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,12 +32,22 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Android",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "RatePocket shows how much you can spend today with personal category budgets and optional Family / Group shared ledgers, invites, roles, currency conversion, and Cloud Backup.",
+    "description": "RatePocket helps you know how much you can spend today, log Pay Day and freelance income alongside expenses, sync with optional Cloud Backup, and share an owner-funded group budget.",
     "url": "https://ratepocket.tradali.com/",
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.tradali.calculator",
-    "publisher": { "@type": "Person", "name": "Tradali", "url": "https://tradali.com/", "email": "support.tradali@gmail.com", "description": "RatePocket is operated by an individual developer using the name Tradali." }
+    "image": "https://ratepocket.tradali.com/og-image.jpg",
+    "publisher": { "@type": "Organization", "name": "Tradali", "url": "https://tradali.com/", "email": "support.tradali@gmail.com" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RatePocket",
+    "url": "https://ratepocket.tradali.com/",
+    "publisher": { "@type": "Organization", "name": "Tradali", "url": "https://tradali.com/" }
+  }
+  </script>
+  <link rel="preload" as="image" href="marketing/family-better-together-1200.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,20 +57,57 @@
   <div class="page">
     <nav class="nav">
       <a class="brand" href="/" aria-label="RatePocket home">
-        <img class="brand-logo" src="brand/ratepocket-mark-purple.svg" width="28" height="28" alt="RatePocket logo" decoding="async">
+        <img class="brand-logo" src="brand/ratepocket-mark-purple.svg" width="28" height="28" alt="" decoding="async">
         <span class="brand-name">RatePocket</span>
       </a>
       <div class="nav-links">
-        <a href="#how-it-works">How it works</a>
-        <a href="#family">Family</a>
-        <a href="#features">Features</a>
+        <a href="#problems">Why RatePocket</a>
+        <a href="#income">Income</a>
+        <a href="#family">Groups</a>
         <a href="#pricing">Pricing</a>
+        <a href="#testers">Join list</a>
+        <a href="#winners">Winners</a>
         <a href="#faq">FAQ</a>
-        <a href="privacy/">Privacy</a>
-        <a href="terms/">Terms</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.tradali.calculator" target="_blank" rel="noopener noreferrer">Get the app</a>
+      <a class="btn btn-primary btn-sm" href="#testers">Join list →</a>
     </nav>
+
+    <!-- Tester winners wheel: remove with #winners after closed testing ends -->
+    <section id="contest" class="contest-banner" aria-label="Closed test winners wheel">
+      <div class="contest-promo-panel">
+        <div class="contest-banner-copy">
+          <div class="badge badge-prize">
+            <span class="badge-dot badge-dot-gold" aria-hidden="true"></span>
+            CLOSED TEST · WINNERS WHEEL
+          </div>
+          <h2>
+            <span class="h1-gold">Chance to win 150&nbsp;USDT</span><span class="h1-grad"> for testers</span>
+          </h2>
+          <p class="contest-dates">
+            <strong>Testing begins:</strong> 1 Oct 2026 ·
+            <strong>Enrollment deadline:</strong> 1 Nov 2026
+          </p>
+          <p>
+            Complete closed testing, then send feedback. We review completed tests on our side and
+            <strong>may add selected testers</strong> to the winners spinning wheel for a
+            <strong>chance to win 150&nbsp;USDT</strong> — not a guaranteed prize.
+          </p>
+          <p>
+            <strong>Your test ends</strong> when you complete the required tasks and send the proof
+            (feedback) — there is no separate fixed “test end” calendar date.
+          </p>
+        </div>
+        <div class="contest-rules-block">
+          <h3 class="contest-rules-title">How it works</h3>
+          <ol class="contest-rules contest-rules-short" aria-label="Winners wheel rules">
+            <li>Join the email list by <strong>1 Nov 2026</strong> · testing begins <strong>1 Oct 2026</strong></li>
+            <li>Install from the private Play link we email you, then use the app and send feedback</li>
+            <li>Your test ends when you finish the tasks and send proof · we may add completed testers to the wheel for a chance at <strong>150&nbsp;USDT</strong> · results posted on this site</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- /Tester winners wheel banner -->
 
     <header class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
@@ -64,396 +115,441 @@
         <div class="hero-copy">
           <div class="badge">
             <span class="badge-dot" aria-hidden="true"></span>
-            ANDROID · ON GOOGLE PLAY
+            ANDROID · CLOSED TESTING
           </div>
           <p class="hero-brand">RatePocket</p>
           <h1>
-            <span class="h1-white">Make room</span><br>
-            <span class="h1-grad">for your</span><br>
-            <span class="h1-white">everyday.</span>
+            <span class="h1-white">Know what you can spend today.</span>
           </h1>
           <p class="hero-purpose">
-            Know how much you can safely spend <strong>today</strong> — alone with personal budgets, or together with a <strong>Family / Group</strong> shared ledger, invites, and roles.
+            Log Pay Day, freelance, or tips alongside spending — same Add flow. Today Available on the homepage and History reports keep the full picture. Works locally; Cloud Backup is optional.
           </p>
-          <p class="hero-sub">Calculator and live currency conversion included. Free to start, no account required for personal local use. A product by <a href="https://tradali.com/">Tradali</a>.</p>
-          <p class="hero-access">This public homepage does not require a login. Anyone can read about RatePocket, the <a href="privacy/">Privacy Policy</a>, and <a href="terms/">Terms</a> without signing in.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tradali.calculator" target="_blank" rel="noopener noreferrer">Get on Google Play</a>
-            <a class="text-link" href="#family">See Family →</a>
+            <a class="btn btn-primary" href="#testers">Join the list →</a>
+            <a class="text-link" href="#problems">See why →</a>
           </div>
-          <p class="fine">Google sign-in is optional for personal use. It is required for paid Cloud Backup and for Family / Group shared workspaces. Today Available, categories, calculator, and convert work offline without signing in.</p>
         </div>
-
-        <div class="hero-phones">
-          <div class="phone-wrap phone-back">
-            <div class="phone-float">
-              <div class="phone-frame phone-frame-sm">
-                <div class="phone-screen">
-                  <img src="screenshots/04-convert.png" width="732" height="1524" alt="RatePocket currency conversion" loading="eager" decoding="async">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="phone-wrap phone-front">
-            <div class="phone-float delay">
-              <div class="phone-frame phone-frame-lg">
-                <div class="phone-screen">
-                  <img src="screenshots/16-family-money.png" width="732" height="1524" alt="RatePocket Family Money — Today Available together" loading="eager" decoding="async">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="float-badge">
-            <div class="float-badge-label">TODAY AVAILABLE</div>
-            <div class="float-badge-value">Solo or shared</div>
-          </div>
+        <div class="hero-campaign">
+          <img
+            class="campaign-art"
+            src="marketing/family-better-together-1200.jpg"
+            width="1200"
+            height="675"
+            alt="RatePocket shared budget on phones"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
         </div>
       </div>
     </header>
 
-    <section id="how-it-works" class="section how-it-works">
-      <div class="section-head">
-        <div class="eyebrow">WHAT RATEPOCKET DOES</div>
-        <h2>Not only where money went — how much you can spend today.</h2>
-        <p>RatePocket is operated by an individual developer using the name Tradali. Use it on Android without creating an account for personal tracking. Cloud Backup and Family / Group require Google sign-in and an active paid plan where applicable.</p>
+    <section id="problems" class="section problems">
+      <div class="section-head narrow">
+        <div class="eyebrow">LIFE GETS EASIER</div>
+        <h2>Problems RatePocket solves</h2>
+        <p>Built for how money feels day to day — not spreadsheet homework.</p>
       </div>
-      <div class="how-grid">
-        <article class="how-card">
-          <h3>Today Available</h3>
-          <p>See a clear daily allowance from your period budget, with carryover from unused days so you stay on plan without guessing.</p>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <p class="problem-pain">“I never know if I can afford dinner tonight.”</p>
+          <p class="problem-fix"><strong>Today Available</strong> — a clear daily allowance, with carryover when you underspend.</p>
         </article>
-        <article class="how-card">
-          <h3>Category budgets</h3>
-          <p>Allocate your period budget across categories, track remaining and overspend, and keep “available to allocate” honest as you adjust.</p>
+        <article class="problem-card">
+          <p class="problem-pain">“We split costs, but nobody sees the same numbers.”</p>
+          <p class="problem-fix"><strong>Owner-funded groups</strong> — one shared budget funded by the Owner’s Cloud. Invitees join free. Personal stays private.</p>
         </article>
-        <article class="how-card">
-          <h3>Family / Group</h3>
-          <p>Share one ledger with up to 8 seats. Invite by email, set Owner / Admin / Member roles, and keep Personal spending private.</p>
+        <article class="problem-card">
+          <p class="problem-pain">“I convert currency in one app, then forget to log the spend.”</p>
+          <p class="problem-fix"><strong>Convert → track</strong> — live rates, then save income or expense in the same flow.</p>
         </article>
-        <article class="how-card">
-          <h3>Calculator &amp; currency conversion</h3>
-          <p>Do everyday math and convert between currencies with live rates. Search by currency code or country name, then log a spend or income.</p>
+        <article class="problem-card">
+          <p class="problem-pain">“Categories blow up and I lose the plot.”</p>
+          <p class="problem-fix"><strong>Category budgets</strong> — allocate, see remaining, stay honest when you adjust.</p>
         </article>
-        <article class="how-card">
-          <h3>History, reports &amp; exports</h3>
-          <p>Review activity, daily budget ledgers, and reports. Export PDF or CSV via a rewarded ad (limited), a $0.99 credit, Lifetime Pass, or Cloud Backup while subscribed.</p>
+        <article class="problem-card">
+          <p class="problem-pain">“Receipts pile up; typing every line is exhausting.”</p>
+          <p class="problem-fix"><strong>Receipt scan</strong> — capture, review, save spends faster (trial on free; higher quota with Cloud).</p>
         </article>
-        <article class="how-card">
-          <h3>Optional Cloud Backup</h3>
-          <p>Paid monthly or yearly Google Play subscription with Google sign-in. Back up and sync personal spending, restore on a new phone, unlock unlimited exports, and raise the category limit to 14. Ads remain on.</p>
+        <article class="problem-card">
+          <p class="problem-pain">“Pay day and freelancing land in one place, then spending eats it — I lose the picture.”</p>
+          <p class="problem-fix"><strong>Spend &amp; income together</strong> — log Pay Day, freelance, tips, and expenses; Today and History reports stay in sync.</p>
         </article>
       </div>
     </section>
+
+    <section id="income" class="section showcase">
+      <div class="showcase-panel family-panel">
+        <div class="showcase-copy">
+          <div class="eyebrow">SPEND &amp; INCOME</div>
+          <h2>Pay Day in.<br><span class="accent">Spends out. One picture.</span></h2>
+          <p>
+            Use the same Add flow for expense or income. Sources include Pay Day, freelance, salary, and tips.
+            The Today homepage updates as you add both; History → Reports shows income, spending, and recorded surplus for the range you pick — not a bank balance.
+          </p>
+          <div class="feature-rows">
+            <div class="feature-row">Log Pay Day, freelance, tips, or salary alongside expenses</div>
+            <div class="feature-row">Today dashboard updates as you add both</div>
+            <div class="feature-row last">History reports: income, spending, surplus by period</div>
+          </div>
+        </div>
+        <div class="showcase-art">
+          <img src="marketing/balance-at-a-glance.jpg" width="1200" height="900" alt="RatePocket — Your balance at a glance: salary, spent, and days ahead" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section id="testers" class="section testers">
+      <div class="section-head narrow">
+        <div class="eyebrow">JOIN CLOSED TESTING</div>
+        <h2>3 easy steps</h2>
+        <p>
+          Leave your Google email — testing begins <strong>1 Oct 2026</strong>; enrollment deadline is <strong>1 Nov 2026</strong>.
+          After we add you, we email you the private Play Store link. There is no public download button on this site.
+          Your personal test ends when you complete the required tasks and send the proof (feedback).
+        </p>
+      </div>
+
+      <div class="tester-progress" id="tester-progress" hidden>
+        <p class="tester-progress-label">Your progress on this device</p>
+        <ol class="tester-progress-track" aria-label="Tester setup progress">
+          <li data-step="list"><span class="tp-dot" aria-hidden="true"></span> Email</li>
+          <li data-step="install"><span class="tp-dot" aria-hidden="true"></span> Install</li>
+          <li data-step="feedback"><span class="tp-dot" aria-hidden="true"></span> Feedback</li>
+        </ol>
+      </div>
+
+      <ol class="tester-steps">
+        <li class="tester-step" data-tester-step="list">
+          <div class="tester-rail" aria-hidden="true">
+            <div class="tester-num">1</div>
+            <div class="tester-line"></div>
+          </div>
+          <div class="tester-body">
+            <div class="tester-meta"><span class="tester-time">~30 seconds</span></div>
+            <h3>Join the email list</h3>
+            <p>Use the <strong>same Google email</strong> as on your Android phone. We’ll contact you after you’re added.</p>
+            <a
+              class="btn btn-primary"
+              data-tester-cta="list"
+              href="https://forms.gle/pYdKT3ir3ttVC4CcA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Join the email list →</a>
+          </div>
+        </li>
+        <li class="tester-step" data-tester-step="install">
+          <div class="tester-rail" aria-hidden="true">
+            <div class="tester-num">2</div>
+            <div class="tester-line"></div>
+          </div>
+          <div class="tester-body">
+            <div class="tester-meta">
+              <span class="tester-time">After we email you</span>
+              <span class="tester-dep">Private Play link</span>
+            </div>
+            <h3>Open the link from your email</h3>
+            <p>
+              When your Google email is on the testers list, we send you the Play Store install link by email.
+              Use that message on your Android phone — we don’t publish the download link on this page.
+            </p>
+            <div class="tester-note">
+              <p>Tip: check spam/promotions if you don’t see it within a few days of joining.</p>
+            </div>
+          </div>
+        </li>
+        <li class="tester-step" data-tester-step="feedback">
+          <div class="tester-rail" aria-hidden="true">
+            <div class="tester-num">3</div>
+          </div>
+          <div class="tester-body">
+            <div class="tester-meta">
+              <span class="tester-time">Optional</span>
+              <span class="tester-dep">Helps the product</span>
+            </div>
+            <h3>Use the app, then send feedback</h3>
+            <p>
+              Try daily spending, income, and (if you join a group) shared budgets. Tell us what felt hard.
+              After we review completed tests, selected testers may be added to the
+              <a href="#winners">winners spinning wheel</a> for a <strong>chance to win</strong> — not a guaranteed prize.
+            </p>
+            <div class="tester-cta-row">
+              <a
+                class="btn btn-primary"
+                data-tester-cta="feedback"
+                href="mailto:support.tradali@gmail.com?subject=RatePocket%20closed%20test%20feedback"
+              >Email feedback →</a>
+              <a
+                class="btn btn-outline"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdqYBE1KaDMo2OUMkQHVsxYX60PA3T_Y0mqqHyJjTjnB-pN6g/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Feedback form</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Tester winners wheel: no automated payout backend; team adds selected names -->
+    <section id="winners" class="section winners">
+      <div class="winners-panel">
+        <div class="eyebrow">WINNERS SPINNING WHEEL</div>
+        <h2>Selected testers land here</h2>
+        <p>
+          People who complete closed testing can be checked on our side. We may add selected testers to the
+          spinning wheel for a <strong>chance to win 150&nbsp;USDT</strong> — not a guaranteed award. Official spin
+          results (clip + names) will be posted on this page. This site does not run automated payouts.
+        </p>
+        <div class="wheel-stage">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <canvas
+            id="winners-wheel"
+            class="winners-wheel"
+            width="420"
+            height="420"
+            role="img"
+            aria-label="Winners spinning wheel. Selected testers appear as segments when the team adds them."
+          ></canvas>
+          <div class="wheel-hub" aria-hidden="true"></div>
+        </div>
+        <p class="wheel-caption" id="wheel-caption">
+          Idle preview — open seats until we add selected testers after review.
+        </p>
+        <ul class="wheel-roster" id="wheel-roster" aria-label="Selected testers on the wheel"></ul>
+        <div class="wheel-actions">
+          <button type="button" class="btn btn-outline" id="wheel-preview-spin">
+            Preview spin
+          </button>
+          <a class="btn btn-primary" href="#testers">Join the list to take part →</a>
+        </div>
+        <p class="wheel-note">
+          Preview spin is a visual demo only. It does not pick a prize winner.
+        </p>
+      </div>
+    </section>
+    <!-- /Tester winners -->
 
     <section id="family" class="section showcase">
       <div class="showcase-panel family-panel">
         <div class="showcase-copy">
-          <div class="eyebrow">FAMILY / GROUP</div>
-          <h2>Share one plan.<br><span class="accent">Keep Personal personal.</span></h2>
-          <p>Create a Family workspace with its own Today Available, categories, and history. Invite people by Google email, assign roles, and see who added what — without mixing in your personal ledger.</p>
+          <div class="eyebrow">GROUPS · OWNER-FUNDED</div>
+          <h2>Your family.<br><span class="accent">One shared budget.</span></h2>
+          <p>
+            Cloud Backup lets the Owner create <strong>one</strong> shared group. Invited people join free (no Cloud required).
+            The Owner’s active Cloud funds collaboration for everyone in that group.
+          </p>
           <div class="feature-rows">
-            <div class="feature-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M16 11a4 4 0 1 0-8 0"/><path d="M4 21v-2a7 7 0 0 1 14 0v2"/><path d="M19 8a3 3 0 1 0 0 6"/><path d="M21 21v-1a5 5 0 0 0-4-4.9"/></svg>
-              Up to 8 seats · Owner, Admin, Member
-            </div>
-            <div class="feature-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 20V9"/></svg>
-              Shared Money, categories, reports &amp; sync
-            </div>
-            <div class="feature-row last">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H5.5L4 17.5V4z"/><path d="M8 9h8M8 13h5"/></svg>
-              Invites by email · activity you can trust
-            </div>
+            <div class="feature-row">7 seats · Owner + up to 6 · Owner, Admin, Member</div>
+            <div class="feature-row">Free invitees · personal money stays private</div>
+            <div class="feature-row last">If Owner Cloud expires, the group becomes read-only</div>
           </div>
         </div>
-        <div class="showcase-phone">
-          <div class="phone-frame phone-frame-xl">
-            <div class="phone-screen">
-              <img src="screenshots/17-workspace-switcher.png" width="732" height="1524" alt="Switch between Personal and Family workspaces" loading="lazy" decoding="async">
-            </div>
-          </div>
+        <div class="showcase-art">
+          <img src="marketing/family-shared-budget.jpg" width="576" height="1024" alt="Family Money — Today Available together" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
-    <section id="features" class="section showcase">
-      <div class="showcase-panel">
-        <div class="showcase-copy">
-          <div class="eyebrow">SPENDING INSIGHTS</div>
-          <h2>See where<br><span class="accent">the money went.</span></h2>
-          <p>Period views with charts, salary context, and category breakdowns — so Today Available stays connected to the full plan, personally or in a Family workspace.</p>
-          <div class="feature-rows">
-            <div class="feature-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M11 3a9 9 0 1 0 9 9h-9V3Z"/><path d="M20 3v9h-9"/></svg>
-              Track by category
-            </div>
-            <div class="feature-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-              See period remaining
-            </div>
-            <div class="feature-row last">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A79BFF" stroke-width="2" aria-hidden="true"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
-              Review daily carryover
-            </div>
-          </div>
-        </div>
-        <div class="showcase-phone">
-          <div class="phone-frame phone-frame-xl">
-            <div class="phone-screen">
-              <img src="screenshots/21-shared-reports.png" width="732" height="1524" alt="Shared Family reports and statistics" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </div>
+    <section id="languages" class="section tools-strip">
+      <div class="section-head narrow">
+        <div class="eyebrow">LANGUAGES</div>
+        <h2>Use RatePocket in your language</h2>
+        <p>App UI language is separate from your display currency.</p>
+      </div>
+      <div class="tool-pills" aria-label="Supported languages">
+        <span>English</span>
+        <span>Français</span>
+        <span>Español</span>
+        <span>العربية</span>
+        <span>اردو</span>
       </div>
     </section>
 
-    <section class="section bento">
-      <div class="section-head">
-        <div class="eyebrow">EVERYTHING YOU NEED</div>
-        <h2>One app for today’s money moments.</h2>
+    <section id="tools" class="section tools-strip">
+      <div class="section-head narrow">
+        <div class="eyebrow">ALSO IN THE APP</div>
+        <h2>Everyday money tools</h2>
       </div>
-
-      <div class="bento-grid">
-        <article class="bento-card">
-          <img src="screenshots/18-family-members.png" width="732" height="1524" alt="Family members and roles" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>People who </span><span class="accent">share the plan.</span></div>
-            <div class="bento-cap">Invite members. Set Owner, Admin, or Member roles.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/23-invite-person.png" width="732" height="1524" alt="Invite someone to a Family workspace" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Invite by </span><span class="accent">email.</span></div>
-            <div class="bento-cap">They sign in with the invited Google account to join.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/20-family-activity.png" width="732" height="1524" alt="Family activity audit log" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Activity you </span><span class="accent">can trust.</span></div>
-            <div class="bento-cap">See who joined, spent, and changed the shared plan.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/15-currency-picker.png" width="732" height="1524" alt="Currency picker" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>A world of </span><span class="accent">currencies.</span></div>
-            <div class="bento-cap">Find currencies by code or country.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/11-receipt-review.png" width="732" height="1524" alt="Receipt review" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Less typing. </span><span class="accent">More tracking.</span></div>
-            <div class="bento-cap">Scan receipts. Review items. Save spends.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/13-salary-setup.png" width="732" height="1524" alt="Budget and period setup" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Your budget. </span><span class="accent">Your starting point.</span></div>
-            <div class="bento-cap">Set income, reserve, and daily mode for the period.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/14-manage-groups.png" width="732" height="1524" alt="Manage categories" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Categories that </span><span class="accent">fit your life.</span></div>
-            <div class="bento-cap">Create, rename, and allocate category budgets.</div>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <img src="screenshots/10-cloud-backup.png" width="732" height="1524" alt="Cloud backup" loading="lazy" decoding="async">
-          <div class="bento-scrim" aria-hidden="true"></div>
-          <div class="bento-text">
-            <div class="bento-title"><span>Your history. </span><span class="accent">Within reach.</span></div>
-            <div class="bento-cap">Back up and sync personal data with Cloud Backup.</div>
-          </div>
-        </article>
-
-        <article class="bento-wide">
-          <div class="bento-wide-copy">
-            <div class="bento-wide-title"><span>Your records. </span><span class="accent">Ready to share.</span></div>
-            <p>Export selected spending as PDF or CSV, and send it wherever it needs to go.</p>
-          </div>
-          <div class="bento-wide-media">
-            <img src="screenshots/09-export.png" width="1080" height="1920" alt="Export data" loading="lazy" decoding="async">
-            <div class="bento-wide-fade" aria-hidden="true"></div>
-          </div>
-        </article>
+      <div class="tool-pills" aria-label="App tools">
+        <span>Calculator</span>
+        <span>Live FX converter</span>
+        <span>Pay Day · freelance · expenses</span>
+        <span>Reports &amp; history</span>
+        <span>PDF / CSV export</span>
+        <span>Receipt scan</span>
+        <span>Cloud backup</span>
       </div>
     </section>
 
     <section id="pricing" class="section pricing">
       <div class="section-head narrow">
         <div class="eyebrow">PRICING</div>
-        <h2>Free to use. Pay only if you want more.</h2>
-        <p>Today Available, categories, calculator, and convert stay free for personal use. Lifetime Pass, Cloud Backup, and Family / Group are optional Google Play purchases.</p>
+        <h2>Free locally. Pay only if you want more.</h2>
+        <p>Display prices are USD references; Google Play shows localized amounts at checkout.</p>
       </div>
-
       <div class="price-grid price-grid-4">
         <article class="price-card">
-          <div class="price-label">FREE</div>
-          <div class="price-amount">$0</div>
-          <ul>
-            <li>✓&nbsp; Today Available, calculator &amp; converter</li>
-            <li>✓&nbsp; All 152 currencies, live rates</li>
-            <li>✓&nbsp; Up to 4 categories</li>
-            <li>✓&nbsp; Export by watching an ad, or $0.99 each</li>
-          </ul>
-        </article>
-
-        <article class="price-card gold">
-          <div class="price-badge gold-badge">BEST VALUE</div>
-          <div class="price-label gold-label">LIFETIME PASS</div>
-          <div class="price-amount">$6.99<span class="price-unit"> one-time</span></div>
-          <ul>
-            <li>✓&nbsp; Unlimited PDF &amp; CSV exports</li>
-            <li>✓&nbsp; No rewarded video required</li>
-            <li>✓&nbsp; Up to 14 categories</li>
-            <li>✓&nbsp; One payment, restore anytime</li>
-          </ul>
-        </article>
-
-        <article class="price-card cloud">
-          <div class="price-badge cloud-badge">BEST COMFORT</div>
-          <div class="price-label cloud-label">CLOUD BACKUP</div>
-          <div class="price-row">
-            <div class="price-amount">$14.99<span class="price-unit">/yr</span></div>
-            <div class="price-alt">or $1.99/mo</div>
+          <div class="price-card-head">
+            <div class="price-badge-slot" aria-hidden="true"></div>
+            <div class="price-label">FREE</div>
+            <div class="price-stack"><div class="price-amount">$0</div></div>
           </div>
           <ul>
-            <li>✓&nbsp; Backup &amp; sync after Google sign-in</li>
-            <li>✓&nbsp; Restore on a new phone</li>
-            <li>✓&nbsp; Unlimited exports + 14 categories</li>
-            <li>✓&nbsp; Extra reports &amp; history comfort</li>
+            <li>✓ Today Available, income &amp; spend, calculator, converter</li>
+            <li>✓ Up to 3 categories · ads may show</li>
+            <li>✓ Join an invited group for free</li>
+            <li>✓ Export via rewarded ad (cooldown) or $0.99 credit</li>
+            <li>✓ 2 receipt AI scans (trial total)</li>
           </ul>
         </article>
-
-        <article class="price-card family">
-          <div class="price-badge family-badge">SHARED</div>
-          <div class="price-label family-label">FAMILY / GROUP</div>
-          <div class="price-row">
-            <div class="price-amount">$76.99<span class="price-unit">/yr</span></div>
-            <div class="price-alt">or $7.99/mo</div>
+        <article class="price-card">
+          <div class="price-card-head">
+            <div class="price-badge-slot"><div class="price-badge gold-badge">ONCE</div></div>
+            <div class="price-label">LIFETIME EXPORT</div>
+            <div class="price-stack"><div class="price-amount">$6.99</div></div>
           </div>
           <ul>
-            <li>✓&nbsp; Shared ledger · up to 8 seats</li>
-            <li>✓&nbsp; Invites, roles &amp; Family activity</li>
-            <li>✓&nbsp; Up to 3 Family workspaces (max 2 owned)</li>
-            <li>✓&nbsp; Personal workspace stays free &amp; private</li>
+            <li>✓ Unlimited personal exports</li>
+            <li>✓ Up to 14 categories</li>
+            <li>✓ One-time Play purchase · Google sign-in</li>
+            <li>✓ No Cloud, groups, or ad-free</li>
+            <li>✓ Receipt AI stays on the free trial quota</li>
+          </ul>
+        </article>
+        <article class="price-card">
+          <div class="price-card-head">
+            <div class="price-badge-slot"><div class="price-badge cloud-badge">SYNC + GROUP</div></div>
+            <div class="price-label">CLOUD BACKUP</div>
+            <div class="price-stack">
+              <div class="price-amount">$3.99<span>/mo</span></div>
+              <div class="price-alt">or $29.99/yr</div>
+            </div>
+          </div>
+          <ul>
+            <li>✓ Personal backup &amp; restore across devices</li>
+            <li>✓ Unlimited personal exports · up to 14 categories</li>
+            <li>✓ Own 1 group (7 seats) · invitees free</li>
+            <li>✓ Ad-free · 55 receipt AI scans / month</li>
           </ul>
         </article>
       </div>
-
+      <p style="text-align:center;color:var(--muted);font-size:14px;line-height:1.6;max-width:40rem;margin:20px auto 0">
+        There is no separate Group Lifetime product. Legacy Family subscriptions (if any) are not sold as a new plan.
+      </p>
       <div class="pricing-cta">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tradali.calculator" target="_blank" rel="noopener noreferrer">Get RatePocket on Google Play</a>
+        <a class="btn btn-primary" href="#testers">Join the list to install →</a>
+      </div>
+    </section>
+
+    <section id="feedback" class="section feedback">
+      <div class="feedback-panel">
+        <div class="feedback-copy">
+          <div class="eyebrow">AFTER YOUR TEST</div>
+          <h2>Tell us what felt hard</h2>
+          <p>
+            Feedback helps shape RatePocket — and helps us confirm who completed testing so we can consider
+            names for the <a href="#winners">winners wheel</a> (a chance to win, not a guarantee).
+          </p>
+          <div class="feedback-actions">
+            <a class="btn btn-primary" href="mailto:support.tradali@gmail.com?subject=RatePocket%20closed%20test%20feedback">Email feedback →</a>
+            <a
+              class="btn btn-outline"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdqYBE1KaDMo2OUMkQHVsxYX60PA3T_Y0mqqHyJjTjnB-pN6g/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Feedback form</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="faq" class="section faq">
-      <h2>Questions</h2>
+      <h2>Questions people actually ask</h2>
       <div class="faq-list" id="faq-list">
         <div class="faq-item open" data-index="0">
           <button type="button" class="faq-q" aria-expanded="true">
-            <span>Do I need a Google account to use RatePocket?</span>
+            <span>What problem does RatePocket solve?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">No for personal local use. Today Available, categories, calculator, currency conversion, and local spending work without signing in. Google sign-in is required for paid Cloud Backup and for Family / Group shared workspaces so membership and sync can be tied to your account.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">It answers “how much can I spend today?” and lets you log Pay Day, freelance, tips, and expenses in the same place. The Today homepage and History → Reports use that ledger so income, spending, and recorded surplus stay in one picture — personally or in an owner-funded group.</div></div>
         </div>
         <div class="faq-item" data-index="1">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>How do I get RatePocket?</span>
+            <span>How do I join closed testing?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Install from Google Play: <a href="https://play.google.com/store/apps/details?id=com.tradali.calculator" target="_blank" rel="noopener noreferrer">play.google.com/store/apps/details?id=com.tradali.calculator</a>. Opening this website does not require a Play login.</div></div>
+          <div class="faq-a"><div class="faq-a-inner"><a href="https://forms.gle/pYdKT3ir3ttVC4CcA" target="_blank" rel="noopener noreferrer">Join the email list</a> by <strong>1 Nov 2026</strong> (testing begins <strong>1 Oct 2026</strong>) → we add you to Play testers → we email you the private install link → install from that email on Android. Then use the app and send feedback. Your test ends when you complete the required tasks and send the proof. Completed testers may be reviewed and added to the <a href="#winners">winners spinning wheel</a> for a chance to win — not a guaranteed prize.</div></div>
         </div>
         <div class="faq-item" data-index="2">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>Is RatePocket free?</span>
+            <span>How does the winners spinning wheel work?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Yes for personal core features — Today Available, calculator, converter, and category tracking are free to use, with ads. Free installs include up to 4 categories. Exporting as PDF/CSV can use a limited free rewarded-ad unlock, a $0.99 export credit, the one-time $6.99 Lifetime Export Pass, or Cloud Backup while subscribed. Cloud Backup and Family / Group are separate Google Play subscriptions and use Google sign-in.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Your closed test ends when you complete the required tasks and send the proof (feedback). After that, we check completed testers on our side. Selected testers may be added to the spinning wheel for a <strong>chance to win 150&nbsp;USDT</strong> — not a guaranteed award. When we run an official spin, we post the wheel clip and names in the <a href="#winners">Winners</a> section. The on-page preview spin is visual only. We do not run automated payouts from this website.</div></div>
         </div>
         <div class="faq-item" data-index="3">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>What is Today Available?</span>
+            <span>Can I track freelance and salary?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Today Available is your daily spending allowance from the period’s daily budget pool, including carryover from unused earlier days when applicable. It works the same way in a Personal workspace and in a Family / Group workspace. It is a budget guide — not a bank balance or financial advice.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes — income sources include Pay Day (salary), freelance, delivery, tips, and other. Spending uses separate categories. Both show on Today and in History → Reports for the period you choose. Recorded surplus is income minus expenses for that range — not a bank balance or guaranteed savings.</div></div>
         </div>
         <div class="faq-item" data-index="4">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>What is Family / Group?</span>
+            <span>Can my family track money together?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Family / Group is an optional shared workspace with its own budget, categories, expenses, and income. The Owner subscribes via Google Play ($7.99/month or $76.99/year), invites people by email, and assigns roles. Personal spending never mixes into a Family ledger. Each account may join or create up to 3 Family workspaces, and own at most 2 of them.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes — with <strong>Cloud Backup</strong>, the Owner creates one shared group (7 seats). Invited Admins and Members join free. Personal spending stays separate. While the Owner’s Cloud is active, Owner and Admin can write shared money; Members can read. If the Owner’s Cloud expires, the group becomes read-only (Owner/Admin can still export historical group data as implemented in the app).</div></div>
         </div>
         <div class="faq-item" data-index="5">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>How do Family invites work?</span>
+            <span>Do I need an account to start?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">The Owner sends an invitation to a Google email. The invitee opens the link (or the in-app deep link), signs in with that same Google account, and accepts. If they are signed in with a different email, RatePocket shows an account check and asks them to switch. Invitations expire; cancelled invites cannot be reused.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">No for personal local tracking. Google sign-in is required for Cloud Backup, creating/joining groups, Lifetime Export Pass purchase, and Play closed testing.</div></div>
         </div>
         <div class="faq-item" data-index="6">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>What is Cloud Backup?</span>
+            <span>Is the core app free?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Cloud Backup is an optional Google Play subscription ($1.99/month or $14.99/year) for <strong>personal</strong> data. It requires an active subscription and Google sign-in. While both are in place, RatePocket can back up and sync personal spending history, restore on a new phone, unlock unlimited exports, and raise the category limit to 14. Family / Group sync is separate and requires the Family plan. Ads stay on. Cancel anytime in Google Play.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes — Today Available, income &amp; spend, calculator, converter, and basic categories are free (with ads). Optional: $0.99 export credit, $6.99 Lifetime Export Pass, or Cloud Backup ($3.99/mo or $29.99/yr) for sync, ad-free use, higher AI quota, and owning a group. Invitees do not need Cloud to join.</div></div>
         </div>
         <div class="faq-item" data-index="7">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>How does AI receipt scan work?</span>
+            <span>Which languages are supported?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">When adding a spend, you can scan a bill with the camera or pick a photo from your gallery. RatePocket uploads the image to our server, which uses an AI vision model (OpenAI) to suggest line items you can edit before saving. Free installs get 3 lifetime scans. Cloud Backup subscribers get 75 scans per calendar month. See the <a href="privacy/">Privacy Policy</a>.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">English, French, Spanish, Arabic, and Urdu. You can change language in Settings; it does not change your currency.</div></div>
         </div>
         <div class="faq-item" data-index="8">
           <button type="button" class="faq-q" aria-expanded="false">
-            <span>How do I delete my account or data?</span>
+            <span>How do I delete my data?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner">Core features work without an account. If you used Cloud Backup or Family / Group, open Settings → Account &amp; data → Delete account while signed in, or use the <a href="delete-account/">Delete account</a> page / email <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a>. Leaving or deleting a Family workspace is separate from cancelling a Play subscription — see that page.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Use in-app Settings → Account &amp; data, the <a href="delete-account/">Delete account</a> page, or email support.tradali@gmail.com. If you own a group, export or delete that group first, then delete the account.</div></div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer-brand">
-        <img class="brand-logo sm" src="brand/ratepocket-mark-purple.svg" width="22" height="22" alt="RatePocket logo" decoding="async">
+        <img class="brand-logo sm" src="brand/ratepocket-mark-purple.svg" width="22" height="22" alt="" decoding="async">
         <span class="footer-name">RatePocket</span>
-        <span class="footer-copy">© 2026 · by Tradali</span>
+        <span class="footer-copy">© 2026 · by <a href="https://tradali.com/">Tradali</a></span>
       </div>
       <div class="footer-links">
-        <a href="terms/">Terms of Service</a>
-        <a href="privacy/">Privacy Policy</a>
+        <a href="#testers">Join list</a>
+        <a href="#winners">Winners</a>
+        <a href="#pricing">Pricing</a>
+        <a href="terms/">Terms</a>
+        <a href="privacy/">Privacy</a>
         <a href="delete-account/">Delete account</a>
         <a href="mailto:support.tradali@gmail.com">Support</a>
       </div>
     </footer>
   </div>
-
-  <a class="back-home" href="/" aria-label="Back to home">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M6 10.5V20h12v-9.5"/></svg>
-    <span>Home</span>
-  </a>
 
   <script src="app.js" defer></script>
 </body>

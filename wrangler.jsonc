@@ -10,6 +10,12 @@
     "not_found_handling": "single-page-application",
     "html_handling": "auto-trailing-slash"
   },
+  "kv_namespaces": [
+    {
+      "binding": "TESTER_SIGNUPS",
+      "id": "c07ce3f5bcab410c9be267568615726d"
+    }
+  ],
   "routes": [
     {
       "pattern": "tradali.com/calculator*",
