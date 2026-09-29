@@ -4,7 +4,6 @@ Product landing for **RatePocket** (currency calculator, expense tracker, Cloud 
 
 ## Product facts (keep in sync with the App)
 
-- **Closed-test winners spinning wheel:** completed testers may be reviewed and selected for a chance to win; visual wheel at `#winners` (edit `SELECTED_TESTERS` in `public/app.js`). No guaranteed award, no USDT prize offer, no automated payouts on this site.
 - **Languages:** English, French, Spanish, Arabic, Urdu
 - **Free:** local tools; ads may show; join invited groups free; 2 AI scan trial; export via ad cooldown or $0.99 credit
 - **Lifetime Export Pass:** ~$6.99 one-time — unlimited personal export; no Cloud / groups / ad-free
@@ -15,7 +14,6 @@ Product landing for **RatePocket** (currency calculator, expense tracker, Cloud 
 
 - **Primary:** https://ratepocket.tradali.com/
 - **Join testers (homepage funnel):** https://ratepocket.tradali.com/#testers
-- **Winners wheel:** https://ratepocket.tradali.com/#winners
 - **1. Email list (Google Form):** https://forms.gle/pYdKT3ir3ttVC4CcA
 - **2. Install link:** emailed privately after you add their Google email in Play Console — **not published on the landing page**
 - **3. Optional feedback:** mailto support.tradali@gmail.com · optional feedback form
