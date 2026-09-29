@@ -52,6 +52,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Prize / Winners Wheel: set SHOW_PRIZE = true to restore promo UI -->
+  <script>
+    window.SHOW_PRIZE = false;
+    if (!window.SHOW_PRIZE) document.documentElement.classList.add("hide-prize");
+  </script>
 </head>
 <body>
   <div class="page">
@@ -66,14 +71,14 @@
         <a href="#family">Groups</a>
         <a href="#pricing">Pricing</a>
         <a href="#testers">Join list</a>
-        <a href="#winners">Winners</a>
+        <a class="js-prize" href="#winners">Winners</a>
         <a href="#faq">FAQ</a>
       </div>
       <a class="btn btn-primary btn-sm" href="#testers">Join list →</a>
     </nav>
 
-    <!-- Tester winners wheel: remove with #winners after closed testing ends -->
-    <section id="contest" class="contest-banner" aria-label="Closed test winners wheel">
+    <!-- Tester winners wheel: gated by SHOW_PRIZE in <head> -->
+    <section id="contest" class="contest-banner js-prize" aria-label="Closed test winners wheel">
       <div class="contest-promo-panel">
         <div class="contest-banner-copy">
           <div class="badge badge-prize">
@@ -270,8 +275,10 @@
             <h3>Use the app, then send feedback</h3>
             <p>
               Try daily spending, income, and (if you join a group) shared budgets. Tell us what felt hard.
+              <span class="js-prize">
               After we review completed tests, selected testers may be added to the
               <a href="#winners">winners spinning wheel</a> for a <strong>chance to win</strong> — not a guaranteed prize.
+              </span>
             </p>
             <div class="tester-cta-row">
               <a
@@ -291,8 +298,8 @@
       </ol>
     </section>
 
-    <!-- Tester winners wheel: no automated payout backend; team adds selected names -->
-    <section id="winners" class="section winners">
+    <!-- Tester winners wheel: gated by SHOW_PRIZE in <head> -->
+    <section id="winners" class="section winners js-prize">
       <div class="winners-panel">
         <div class="eyebrow">WINNERS SPINNING WHEEL</div>
         <h2>Selected testers land here</h2>
@@ -448,8 +455,8 @@
           <div class="eyebrow">AFTER YOUR TEST</div>
           <h2>Tell us what felt hard</h2>
           <p>
-            Feedback helps shape RatePocket — and helps us confirm who completed testing so we can consider
-            names for the <a href="#winners">winners wheel</a> (a chance to win, not a guarantee).
+            Feedback helps shape RatePocket<span class="js-prize"> — and helps us confirm who completed testing so we can consider
+            names for the <a href="#winners">winners wheel</a> (a chance to win, not a guarantee)</span>.
           </p>
           <div class="feedback-actions">
             <a class="btn btn-primary" href="mailto:support.tradali@gmail.com?subject=RatePocket%20closed%20test%20feedback">Email feedback →</a>
@@ -479,9 +486,9 @@
             <span>How do I join closed testing?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-a"><div class="faq-a-inner"><a href="https://forms.gle/pYdKT3ir3ttVC4CcA" target="_blank" rel="noopener noreferrer">Join the email list</a> by <strong>1 Nov 2026</strong> (testing begins <strong>1 Oct 2026</strong>) → we add you to Play testers → we email you the private install link → install from that email on Android. Then use the app and send feedback. Your test ends when you complete the required tasks and send the proof. Completed testers may be reviewed and added to the <a href="#winners">winners spinning wheel</a> for a chance to win — not a guaranteed prize.</div></div>
+          <div class="faq-a"><div class="faq-a-inner"><a href="https://forms.gle/pYdKT3ir3ttVC4CcA" target="_blank" rel="noopener noreferrer">Join the email list</a> by <strong>1 Nov 2026</strong> (testing begins <strong>1 Oct 2026</strong>) → we add you to Play testers → we email you the private install link → install from that email on Android. Then use the app and send feedback. Your test ends when you complete the required tasks and send the proof.<span class="js-prize"> Completed testers may be reviewed and added to the <a href="#winners">winners spinning wheel</a> for a chance to win — not a guaranteed prize.</span></div></div>
         </div>
-        <div class="faq-item" data-index="2">
+        <div class="faq-item js-prize" data-index="2">
           <button type="button" class="faq-q" aria-expanded="false">
             <span>How does the winners spinning wheel work?</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -541,7 +548,7 @@
       </div>
       <div class="footer-links">
         <a href="#testers">Join list</a>
-        <a href="#winners">Winners</a>
+        <a class="js-prize" href="#winners">Winners</a>
         <a href="#pricing">Pricing</a>
         <a href="terms/">Terms</a>
         <a href="privacy/">Privacy</a>

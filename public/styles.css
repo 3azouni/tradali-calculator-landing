@@ -2019,3 +2019,8 @@ img {
     transition: none !important;
   }
 }
+
+/* Prize / Winners Wheel — controlled by SHOW_PRIZE in index.html <head> */
+html.hide-prize .js-prize {
+  display: none !important;
+}

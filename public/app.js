@@ -70,8 +70,10 @@ if (faqRoot) {
  * Winners wheel — display only.
  * Edit SELECTED_TESTERS when the team adds verified closed testers.
  * Empty list shows open-seat placeholders. Preview spin is not an official draw.
+ * Gated by window.SHOW_PRIZE (set in index.html <head>).
  */
 (function initWinnersWheel() {
+  if (typeof window.SHOW_PRIZE !== "undefined" && !window.SHOW_PRIZE) return;
   /** @type {string[]} Team-curated display names for selected testers (edit manually). */
   const SELECTED_TESTERS = [];
 
