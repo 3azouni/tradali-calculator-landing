@@ -1,26 +1,29 @@
 # RatePocket Landing
 
-Product landing for **RatePocket** (currency calculator, expense tracker, Cloud Backup, and owner-funded Groups) by **Tradali**.
+Product landing for **RatePocket** (daily budget, payday and income, Family and Split groups, AI receipt scan, cloud backup, reports, currency converter) by **Tradali**.
 
 ## Product facts (keep in sync with the App)
 
-- **Languages:** English, French, Spanish, Arabic, Urdu
-- **Free:** local tools; ads may show; join invited groups free; 2 AI scan trial; export via ad cooldown or $0.99 credit
-- **Lifetime Export Pass:** ~$6.99 one-time — unlimited personal export; no Cloud / groups / ad-free
-- **Cloud Backup:** ~$3.99/mo or ~$29.99/yr — personal sync, ad-free, 55 AI scans/mo, own 1 group (7 seats); invitees free
-- **No** separate Group Lifetime ($7.99) product; legacy Family SKUs not sold as a new plan
+Checked against the app on 2026-10-06 (`src/theme.ts`, `src/budget/categories.ts`, `supabase/functions/analyze-receipt`, `supabase/functions/delete-account`).
+
+- **Languages:** English, Arabic, Spanish, French, Urdu
+- **Free:** budget, income, reports, converter, calculator; up to 2 categories; ads; join invited groups (one Family + one Split); 2 lifetime AI scans; export after a rewarded ad or $0.99 Export once
+- **Personal** (`cloud_backup`): $3.99/mo or $39.99/yr; backup and sync, no ads, up to 14 categories, unlimited exports, 35 AI scans/month
+- **Pro+** (`pro_plus`): $7.99/mo or $79.99/yr; everything in Personal, own 2 groups (1 Family + 1 Split, per-style cap since app commit 0e5f2fd) with up to 12 people each, 100 AI scans/month
+- **Workspaces per account:** Personal + own 1 Family + own 1 Split (Pro+) + join 1 Family + join 1 Split (free) = 5
+- **Lifetime Export Pass:** no longer sold; still honoured for owners
+- **Group pause:** if the Owner's plan ends the whole group is read-only; Split groups can still record payments
+- **Group delete:** every member is emailed a CSV copy (full report + payments), then the group row is deleted with its shared data
+- **Account delete:** blocked while the user owns a group; deletes auth user, personal cloud entries/periods/prefs, memberships, sent invites, push tokens; group history shows "Former member"; scan counters are kept
+
+## Store buttons
+
+Neither store listing is public yet (both 404 on 2026-10-06), so the homepage shows non-link "Coming soon" store labels (`.store.soon`) in the hero and the final CTA. When a listing goes live, replace that `<span class="store soon">` with the official App Store / Google Play badge linking to the listing.
 
 ## URLs
 
 - **Primary:** https://ratepocket.tradali.com/
-- **Join testers (homepage funnel):** https://ratepocket.tradali.com/#testers
-- **1. Email list (Google Form):** https://forms.gle/pYdKT3ir3ttVC4CcA
-- **2. Install link:** emailed privately after you add their Google email in Play Console — **not published on the landing page**
-- **3. Optional feedback:** mailto support.tradali@gmail.com · optional feedback form
-- **Feedback form:** https://docs.google.com/forms/d/e/1FAIpQLSdqYBE1KaDMo2OUMkQHVsxYX60PA3T_Y0mqqHyJjTjnB-pN6g/viewform?usp=dialog
-
-Responses land in your Google Form / linked Sheet. Add emails in Play Console, then email testers the private Play testing / store link. Do not put that link on the public homepage.
-- **Terms of Service:** https://ratepocket.tradali.com/terms/
+- **Terms of Use:** https://ratepocket.tradali.com/terms/
 - **Privacy Policy:** https://ratepocket.tradali.com/privacy/
 - **Delete account / data:** https://ratepocket.tradali.com/delete-account/
 - **OAuth bridge (not the app):** https://ratepocket.tradali.com/auth/callback/ — forwards Google sign-in tokens to the RatePocket app (`ratepocket://` or local Expo web). This is not the product UI.
@@ -30,9 +33,14 @@ Responses land in your Google Form / linked Sheet. Add emails in Play Console, t
   - `tradali.com/calculator` → `ratepocket.tradali.com`
   - `calculator.tradali.com` → `ratepocket.tradali.com`
 
-## Marketing screenshots
+## Site structure
 
-Family campaign art lives in `public/marketing/family-*.jpg` (Better together, Shared budget, Members, Permissions). Personal tool screenshots remain in `public/screenshots/`. Older Family SVG rasters (`16-…` through `23-…`) are kept for reference but the homepage hero and Family sections use the campaign frames.
+- `public/site.css`: one stylesheet for the homepage and legal pages (dark theme, WCAG AA colours, reduced motion)
+- `scripts/stamp-assets.mjs`: runs on `npm run deploy` and adds a content hash to `site.css` / `site.js` links (`?v=…`). CSS and JS are cached for 7 days, so this is what lets returning visitors see new styles. Always deploy with `npm run deploy`, not a bare `wrangler deploy`.
+- `public/fonts/`: Plus Jakarta Sans subset (WOFF, OFL), self-hosted so the site makes no Google Fonts requests
+- `public/img/screens/`: app screens (example data) shown inside CSS phone frames, 440w and 660w WebP
+- `public/img/gallery/`: the captioned App Store screenshots used in the Tour strip
+- `public/marketing/`, `public/screenshots/`: older art, no longer used by the homepage
 
 ## Docs
 

@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RatePocket — Know what you can spend today</title>
-  <meta name="description" content="Local-first spending and income tracker for Android — iOS App Store coming very soon. Free core tools; optional Cloud Backup with owner-funded groups. English, French, Spanish, Arabic, and Urdu.">
+  <title>RatePocket: know what you can spend today</title>
+  <meta name="description" content="Budget, payday, Family and Split groups, AI receipt scan, cloud backup and reports in one simple app. Coming soon to iPhone and Android.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0D0D0D">
+  <meta name="theme-color" content="#0E0B18">
   <link rel="canonical" href="https://ratepocket.tradali.com/">
   <link rel="icon" type="image/png" href="brand/logo-r.png">
   <link rel="apple-touch-icon" href="brand/logo-r.png">
-  <meta property="og:title" content="RatePocket — Know what you can spend today">
-  <meta property="og:description" content="Track spend and income locally on Android; iOS App Store coming very soon. Cloud Backup adds sync, ad-free use, receipt AI, and owner-funded shared groups. Languages: EN, FR, ES, AR, UR.">
+  <meta property="og:title" content="RatePocket: know what you can spend today">
+  <meta property="og:description" content="Budget, payday, splits and receipts. One simple app. Coming soon to iPhone and Android.">
   <meta property="og:url" content="https://ratepocket.tradali.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RatePocket">
@@ -19,10 +19,10 @@
   <meta property="og:image" content="https://ratepocket.tradali.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="RatePocket — Know what you can spend today">
+  <meta property="og:image:alt" content="RatePocket on iPhone and Android: Stop guessing. Start knowing.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RatePocket — Know what you can spend today">
-  <meta name="twitter:description" content="Local-first money tools on Android; iOS App Store coming very soon. Cloud Backup includes sync and owner-funded groups (7 seats). Free invitees.">
+  <meta name="twitter:title" content="RatePocket: know what you can spend today">
+  <meta name="twitter:description" content="Budget, payday, splits and receipts. One simple app.">
   <meta name="twitter:image" content="https://ratepocket.tradali.com/og-image.jpg">
   <script type="application/ld+json">
   {
@@ -30,447 +30,506 @@
     "@type": "SoftwareApplication",
     "name": "RatePocket",
     "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Android",
+    "operatingSystem": "iOS, Android",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "RatePocket helps you know how much you can spend today, log Pay Day and freelance income alongside expenses, sync with optional Cloud Backup, and share an owner-funded group budget.",
+    "description": "Budget, payday and income, Family and Split groups, AI receipt scan, cloud backup, reports and a currency converter in one app.",
     "url": "https://ratepocket.tradali.com/",
     "image": "https://ratepocket.tradali.com/og-image.jpg",
+    "inLanguage": ["en", "fr", "es", "ar", "ur"],
     "publisher": { "@type": "Organization", "name": "Tradali", "url": "https://tradali.com/", "email": "support.tradali@gmail.com" }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "RatePocket",
-    "url": "https://ratepocket.tradali.com/",
-    "publisher": { "@type": "Organization", "name": "Tradali", "url": "https://tradali.com/" }
-  }
-  </script>
-  <link rel="preload" as="image" href="marketing/family-better-together-1200.jpg" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="/fonts/plus-jakarta-sans-800.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" as="image" href="img/screens/personal-home-660.webp" fetchpriority="high">
+  <link rel="stylesheet" href="site.css?v=74482dc1">
 </head>
 <body>
-  <div class="page">
-    <nav class="nav">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/><circle cx="12" cy="18" r="1.4" fill="currentColor"/></symbol>
+      <symbol id="i-payday" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11M7.5 9.5L12 14l4.5-4.5"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+      <symbol id="i-split" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.5"/><path d="M3 19c0-3 2.2-5 5-5s5 2 5 5"/><path d="M14.5 14.6c.8-.4 1.6-.6 2.5-.6 2.4 0 4 1.7 4 4.5"/></symbol>
+      <symbol id="i-family" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M9 9h6M9 12h6M9 15h3"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.2 9.1 4.5 4.5 0 0 0 7 18z"/><path d="M12 15v-5M9.8 12.2L12 10l2.2 2.2"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="6" y="11" width="3" height="6" rx="1"/><rect x="11" y="7" width="3" height="10" rx="1"/><rect x="16" y="13" width="3" height="4" rx="1"/></symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-4-4M20 16H6l4 4"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+      <symbol id="i-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="2.5" width="13" height="19" rx="2.2"/><circle cx="12" cy="5.4" r=".6" fill="currentColor"/></symbol>
+      <symbol id="i-eu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13"/></symbol>
+      <symbol id="i-bank-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5M5 10v7M9.5 10v7M14.5 10v7M19 10v7M3 20h18"/><path d="M3 3l18 18"/></symbol>
+      <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 12h12"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="sb-ios" viewBox="0 0 70 13"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0.5" width="3" height="11.5" rx="1"/><path d="M31 2.2c2.4 0 4.6.9 6.3 2.5l1.2-1.3C36.4 1.4 33.8.4 31 .4s-5.4 1-7.5 3l1.2 1.3C26.4 3.1 28.6 2.2 31 2.2zm0 3.6c1.4 0 2.7.5 3.7 1.4l1.2-1.3C34.6 4.7 32.9 4 31 4s-3.6.7-4.9 1.9l1.2 1.3c1-.9 2.3-1.4 3.7-1.4zm0 3.6c.6 0 1.1.2 1.5.5L31 11.6l-1.5-1.7c.4-.3.9-.5 1.5-.5z"/><rect x="44.5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="#fff" stroke-opacity=".5"/><rect x="46.2" y="2.2" width="19.6" height="8.6" rx="2"/><rect x="68.6" y="4.3" width="1.4" height="4.4" rx=".7" fill-opacity=".5"/></symbol>
+      <symbol id="sb-android" viewBox="0 0 44 13"><path d="M8 2C5.4 2 3 3 1.2 4.7L8 12l6.8-7.3C13 3 10.6 2 8 2z"/><path d="M30 1v11H19z"/><rect x="36.5" y="0" width="3" height="1.4" rx=".5"/><rect x="34" y="1.2" width="8" height="11.8" rx="1.6"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-in">
       <a class="brand" href="/" aria-label="RatePocket home">
-        <img class="brand-logo" src="brand/ratepocket-mark-purple.svg" width="28" height="28" alt="" decoding="async">
-        <span class="brand-name">RatePocket</span>
+        <img src="brand/ratepocket-mark-purple.svg" width="30" height="30" alt="">
+        RatePocket
       </a>
-      <div class="nav-links">
-        <a href="#problems">Why RatePocket</a>
-        <a href="#income">Income</a>
-        <a href="#family">Groups</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#testers">Join list</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#groups">Groups</a>
+        <a href="#tour">Tour</a>
+        <a href="#plans">Plans</a>
         <a href="#faq">FAQ</a>
-      </div>
-      <a class="btn btn-primary btn-sm" href="#testers">Join list →</a>
-    </nav>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
+      <details class="menu">
+        <summary aria-label="Open menu"><svg width="20" height="20" aria-hidden="true"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main">
+          <a href="#features">Features</a>
+          <a href="#groups">Groups</a>
+          <a href="#tour">Tour</a>
+          <a href="#plans">Plans</a>
+          <a href="#faq">FAQ</a>
+          <a href="#get">Get the app</a>
+        </nav>
+      </details>
+    </div>
+  </header>
 
-    <header class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-grid">
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="badge">
-            <span class="badge-dot" aria-hidden="true"></span>
-            ANDROID · CLOSED TESTING
+          <a class="pill" href="#groups"><span class="new">NEW</span> Family &amp; Split groups <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <h1 id="hero-title">Know what you can <span class="accent">spend today.</span></h1>
+          <p class="lead">Budget, payday, splits and receipts. One simple app.</p>
+          <div class="stores">
+            <span class="store soon" role="img" aria-label="iPhone app: coming soon to the App Store">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span><small>COMING SOON</small><strong>App Store</strong></span>
+            </span>
+            <span class="store soon" role="img" aria-label="Android app: coming soon to Google Play">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-device"/></svg>
+              <span><small>COMING SOON</small><strong>Google Play</strong></span>
+            </span>
           </div>
-          <p class="hero-brand">RatePocket</p>
-          <h1>
-            <span class="h1-white">Know what you can spend today.</span>
-          </h1>
-          <p class="hero-purpose">
-            Log Pay Day, freelance, or tips alongside spending — same Add flow. Today Available on the homepage and History reports keep the full picture. Works locally; Cloud Backup is optional.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#testers">Join the list →</a>
-            <a class="text-link" href="#problems">See why →</a>
-          </div>
-          <p class="fine">iOS App Store — coming very soon. Be prepared.</p>
-        </div>
-        <div class="hero-campaign">
-          <img
-            class="campaign-art"
-            src="marketing/family-better-together-1200.jpg"
-            width="1200"
-            height="675"
-            alt="RatePocket shared budget on phones"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          >
-        </div>
-      </div>
-    </header>
-
-    <section id="problems" class="section problems">
-      <div class="section-head narrow">
-        <div class="eyebrow">LIFE GETS EASIER</div>
-        <h2>Problems RatePocket solves</h2>
-        <p>Built for how money feels day to day — not spreadsheet homework.</p>
-      </div>
-      <div class="problem-grid">
-        <article class="problem-card">
-          <p class="problem-pain">“I never know if I can afford dinner tonight.”</p>
-          <p class="problem-fix"><strong>Today Available</strong> — a clear daily allowance, with carryover when you underspend.</p>
-        </article>
-        <article class="problem-card">
-          <p class="problem-pain">“We split costs, but nobody sees the same numbers.”</p>
-          <p class="problem-fix"><strong>Owner-funded groups</strong> — one shared budget funded by the Owner’s Cloud. Invitees join free. Personal stays private.</p>
-        </article>
-        <article class="problem-card">
-          <p class="problem-pain">“I convert currency in one app, then forget to log the spend.”</p>
-          <p class="problem-fix"><strong>Convert → track</strong> — live rates, then save income or expense in the same flow.</p>
-        </article>
-        <article class="problem-card">
-          <p class="problem-pain">“Categories blow up and I lose the plot.”</p>
-          <p class="problem-fix"><strong>Category budgets</strong> — allocate, see remaining, stay honest when you adjust.</p>
-        </article>
-        <article class="problem-card">
-          <p class="problem-pain">“Receipts pile up; typing every line is exhausting.”</p>
-          <p class="problem-fix"><strong>Receipt scan</strong> — capture, review, save spends faster (trial on free; higher quota with Cloud).</p>
-        </article>
-        <article class="problem-card">
-          <p class="problem-pain">“Pay day and freelancing land in one place, then spending eats it — I lose the picture.”</p>
-          <p class="problem-fix"><strong>Spend &amp; income together</strong> — log Pay Day, freelance, tips, and expenses; Today and History reports stay in sync.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="income" class="section showcase">
-      <div class="showcase-panel family-panel">
-        <div class="showcase-copy">
-          <div class="eyebrow">SPEND &amp; INCOME</div>
-          <h2>Pay Day in.<br><span class="accent">Spends out. One picture.</span></h2>
-          <p>
-            Use the same Add flow for expense or income. Sources include Pay Day, freelance, salary, and tips.
-            The Today homepage updates as you add both; History → Reports shows income, spending, and recorded surplus for the range you pick — not a bank balance.
-          </p>
-          <div class="feature-rows">
-            <div class="feature-row">Log Pay Day, freelance, tips, or salary alongside expenses</div>
-            <div class="feature-row">Today dashboard updates as you add both</div>
-            <div class="feature-row last">History reports: income, spending, surplus by period</div>
-          </div>
-        </div>
-        <div class="showcase-art">
-          <img src="marketing/balance-at-a-glance.jpg" width="1200" height="900" alt="RatePocket — Your balance at a glance: salary, spent, and days ahead" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <section id="testers" class="section testers">
-      <div class="section-head narrow">
-        <div class="eyebrow">JOIN CLOSED TESTING</div>
-        <h2>3 easy steps</h2>
-        <p>
-          Leave your Google email — testing begins <strong>1 Oct 2026</strong>; enrollment deadline is <strong>1 Nov 2026</strong>.
-          After we add you, we email you the private Play Store link. There is no public download button on this site.
-          Your personal test ends when you complete the required tasks and send the proof (feedback).
-        </p>
-      </div>
-
-      <div class="tester-progress" id="tester-progress" hidden>
-        <p class="tester-progress-label">Your progress on this device</p>
-        <ol class="tester-progress-track" aria-label="Tester setup progress">
-          <li data-step="list"><span class="tp-dot" aria-hidden="true"></span> Email</li>
-          <li data-step="install"><span class="tp-dot" aria-hidden="true"></span> Install</li>
-          <li data-step="feedback"><span class="tp-dot" aria-hidden="true"></span> Feedback</li>
-        </ol>
-      </div>
-
-      <ol class="tester-steps">
-        <li class="tester-step" data-tester-step="list">
-          <div class="tester-rail" aria-hidden="true">
-            <div class="tester-num">1</div>
-            <div class="tester-line"></div>
-          </div>
-          <div class="tester-body">
-            <div class="tester-meta"><span class="tester-time">~30 seconds</span></div>
-            <h3>Join the email list</h3>
-            <p>Use the <strong>same Google email</strong> as on your Android phone. We’ll contact you after you’re added.</p>
-            <a
-              class="btn btn-primary"
-              data-tester-cta="list"
-              href="https://forms.gle/pYdKT3ir3ttVC4CcA"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Join the email list →</a>
-          </div>
-        </li>
-        <li class="tester-step" data-tester-step="install">
-          <div class="tester-rail" aria-hidden="true">
-            <div class="tester-num">2</div>
-            <div class="tester-line"></div>
-          </div>
-          <div class="tester-body">
-            <div class="tester-meta">
-              <span class="tester-time">After we email you</span>
-              <span class="tester-dep">Private Play link</span>
-            </div>
-            <h3>Open the link from your email</h3>
-            <p>
-              When your Google email is on the testers list, we send you the Play Store install link by email.
-              Use that message on your Android phone — we don’t publish the download link on this page.
-            </p>
-            <div class="tester-note">
-              <p>Tip: check spam/promotions if you don’t see it within a few days of joining.</p>
-            </div>
-          </div>
-        </li>
-        <li class="tester-step" data-tester-step="feedback">
-          <div class="tester-rail" aria-hidden="true">
-            <div class="tester-num">3</div>
-          </div>
-          <div class="tester-body">
-            <div class="tester-meta">
-              <span class="tester-time">Optional</span>
-              <span class="tester-dep">Helps the product</span>
-            </div>
-            <h3>Use the app, then send feedback</h3>
-            <p>
-              Try daily spending, income, and (if you join a group) shared budgets. Tell us what felt hard.
-            </p>
-            <div class="tester-cta-row">
-              <a
-                class="btn btn-primary"
-                data-tester-cta="feedback"
-                href="mailto:support.tradali@gmail.com?subject=RatePocket%20closed%20test%20feedback"
-              >Email feedback →</a>
-              <a
-                class="btn btn-outline"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdqYBE1KaDMo2OUMkQHVsxYX60PA3T_Y0mqqHyJjTjnB-pN6g/viewform?usp=dialog"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Feedback form</a>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="family" class="section showcase">
-      <div class="showcase-panel family-panel">
-        <div class="showcase-copy">
-          <div class="eyebrow">GROUPS · OWNER-FUNDED</div>
-          <h2>Your family.<br><span class="accent">One shared budget.</span></h2>
-          <p>
-            Cloud Backup lets the Owner create <strong>one</strong> shared group. Invited people join free (no Cloud required).
-            The Owner’s active Cloud funds collaboration for everyone in that group.
-          </p>
-          <div class="feature-rows">
-            <div class="feature-row">7 seats · Owner + up to 6 · Owner, Admin, Member</div>
-            <div class="feature-row">Free invitees · personal money stays private</div>
-            <div class="feature-row last">If Owner Cloud expires, the group becomes read-only</div>
-          </div>
-        </div>
-        <div class="showcase-art">
-          <img src="marketing/family-shared-budget.jpg" width="576" height="1024" alt="Family Money — Today Available together" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <section id="languages" class="section tools-strip">
-      <div class="section-head narrow">
-        <div class="eyebrow">LANGUAGES</div>
-        <h2>Use RatePocket in your language</h2>
-        <p>App UI language is separate from your display currency.</p>
-      </div>
-      <div class="tool-pills" aria-label="Supported languages">
-        <span>English</span>
-        <span>Français</span>
-        <span>Español</span>
-        <span>العربية</span>
-        <span>اردو</span>
-      </div>
-    </section>
-
-    <section id="tools" class="section tools-strip">
-      <div class="section-head narrow">
-        <div class="eyebrow">ALSO IN THE APP</div>
-        <h2>Everyday money tools</h2>
-      </div>
-      <div class="tool-pills" aria-label="App tools">
-        <span>Calculator</span>
-        <span>Live FX converter</span>
-        <span>Pay Day · freelance · expenses</span>
-        <span>Reports &amp; history</span>
-        <span>PDF / CSV export</span>
-        <span>Receipt scan</span>
-        <span>Cloud backup</span>
-      </div>
-    </section>
-
-    <section id="pricing" class="section pricing">
-      <div class="section-head narrow">
-        <div class="eyebrow">PRICING</div>
-        <h2>Free locally. Pay only if you want more.</h2>
-        <p>Display prices are USD references; Google Play shows localized amounts at checkout.</p>
-      </div>
-      <div class="price-grid price-grid-4">
-        <article class="price-card">
-          <div class="price-card-head">
-            <div class="price-badge-slot" aria-hidden="true"></div>
-            <div class="price-label">FREE</div>
-            <div class="price-stack"><div class="price-amount">$0</div></div>
-          </div>
-          <ul>
-            <li>✓ Today Available, income &amp; spend, calculator, converter</li>
-            <li>✓ Up to 3 categories · ads may show</li>
-            <li>✓ Join an invited group for free</li>
-            <li>✓ Export via rewarded ad (cooldown) or $0.99 credit</li>
-            <li>✓ 2 receipt AI scans (trial total)</li>
+          <ul class="trust" aria-label="Highlights">
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg>Free to start</li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg>No account needed</li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg>No bank login</li>
           </ul>
-        </article>
-        <article class="price-card">
-          <div class="price-card-head">
-            <div class="price-badge-slot"><div class="price-badge gold-badge">ONCE</div></div>
-            <div class="price-label">LIFETIME EXPORT</div>
-            <div class="price-stack"><div class="price-amount">$6.99</div></div>
+        </div>
+
+        <div class="hero-art">
+          <figure class="phone phone-a" style="--w: clamp(220px, 23vw, 300px)">
+            <div class="frame"><div class="screen">
+              <div class="bar"><span>9:41</span><svg viewBox="0 0 70 13" aria-hidden="true"><use href="#sb-ios"/></svg></div>
+              <div class="island"></div>
+              <img src="img/screens/personal-home-660.webp" srcset="img/screens/personal-home-440.webp 440w, img/screens/personal-home-660.webp 660w" sizes="(max-width: 960px) 52vw, 300px" width="660" height="1335" fetchpriority="high"
+                alt="RatePocket Money screen with example data: $2,722.01 of the October budget left, $377.99 spent of $3,100.">
+            </div></div>
+          </figure>
+          <figure class="phone android phone-b" style="--w: clamp(200px, 21vw, 272px)">
+            <div class="frame"><div class="screen">
+              <div class="bar"><span>9:41</span><svg viewBox="0 0 44 13" aria-hidden="true"><use href="#sb-android"/></svg></div>
+              <div class="island"></div>
+              <img src="img/screens/split-home-660.webp" srcset="img/screens/split-home-440.webp 440w, img/screens/split-home-660.webp 660w" sizes="(max-width: 960px) 48vw, 272px" width="660" height="1335"
+                alt="Split group with example data for a Lisbon trip: you're owed €395.55, and who paid what among four friends.">
+            </div></div>
+          </figure>
+          <div class="float f1" aria-hidden="true">
+            <span class="ico green"><svg width="20" height="20"><use href="#i-check"/></svg></span>
+            <span><b>You're owed €395.55</b><small>Lisbon Trip · 4 people</small></span>
           </div>
-          <ul>
-            <li>✓ Unlimited personal exports</li>
-            <li>✓ Up to 14 categories</li>
-            <li>✓ One-time Play purchase · Google sign-in</li>
-            <li>✓ No Cloud, groups, or ad-free</li>
-            <li>✓ Receipt AI stays on the free trial quota</li>
-          </ul>
-        </article>
-        <article class="price-card">
-          <div class="price-card-head">
-            <div class="price-badge-slot"><div class="price-badge cloud-badge">SYNC + GROUP</div></div>
-            <div class="price-label">CLOUD BACKUP</div>
-            <div class="price-stack">
-              <div class="price-amount">$3.99<span>/mo</span></div>
-              <div class="price-alt">or $39.99/yr</div>
+          <div class="float f2" aria-hidden="true">
+            <span class="ico green"><svg width="20" height="20"><use href="#i-payday"/></svg></span>
+            <span><b>Payday</b><small>Salary · Oct 1</small></span>
+            <span class="amt accent">+$4,800</span>
+          </div>
+          <div class="float f3" aria-hidden="true">
+            <span class="ico pink"><svg width="20" height="20"><use href="#i-scan"/></svg></span>
+            <span><b>Receipt scanned</b><small>3 items · check &amp; save</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats band -->
+    <section class="wrap stats" aria-label="RatePocket in numbers">
+      <div><b>8</b><span>money tools<br>in one app</span></div>
+      <div><b>12</b><span>people per<br>group</span></div>
+      <div><b>5</b><span>languages,<br>incl. Arabic</span></div>
+      <div><b>0</b><span>bank logins<br>needed</span></div>
+    </section>
+
+    <!-- Bento features -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Everything in one place</p>
+          <h2 class="h2" id="features-title">One app instead of <span class="accent-violet">five.</span></h2>
+        </div>
+
+        <div class="bento">
+          <article class="b b-budget">
+            <div class="b-copy">
+              <span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-gauge"/></svg></span>
+              <h3>Budget control</h3>
+              <p>See what's left. Every day.</p>
             </div>
+            <figure class="phone crop b-phone" style="--w: 250px">
+              <div class="frame"><div class="screen">
+                <div class="bar"><span>9:41</span><svg viewBox="0 0 70 13" aria-hidden="true"><use href="#sb-ios"/></svg></div><div class="island"></div>
+                <img src="img/screens/categories-440.webp" srcset="img/screens/categories-440.webp 440w, img/screens/categories-660.webp 660w" sizes="250px" width="440" height="890" loading="lazy" decoding="async"
+                  alt="Categories with example data: Groceries, Dining and Transport, each with budget, spent and left.">
+              </div></div>
+            </figure>
+          </article>
+
+          <article class="b b-payday">
+            <span class="ico green"><svg width="20" height="20" aria-hidden="true"><use href="#i-payday"/></svg></span>
+            <h3>Payday &amp; income</h3>
+            <p>Salary, freelance, tips. All counted.</p>
+            <div class="mini-rows" aria-hidden="true">
+              <div><span>Salary</span><b class="accent">+$4,800</b></div>
+              <div><span>Logo design gig</span><b class="accent">+$350</b></div>
+              <div><span>Weekly groceries</span><b class="pinkt">−$92.40</b></div>
+            </div>
+          </article>
+
+          <article class="b b-scan">
+            <span class="ico pink"><svg width="20" height="20" aria-hidden="true"><use href="#i-scan"/></svg></span>
+            <h3>AI receipt scan</h3>
+            <p>Snap. Check. Save.</p>
+            <p class="note-chip">Photo never stored</p>
+            <div class="scan-art" aria-hidden="true">
+              <div class="receipt"><i></i><i></i><i></i><i class="s"></i><i></i><i class="s"></i></div>
+              <div class="scan-line"></div>
+            </div>
+          </article>
+
+          <article class="b b-split">
+            <div class="b-copy">
+              <span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-split"/></svg></span>
+              <h3>Split groups <span class="tag-new">NEW</span></h3>
+              <p>Who paid. Who owes. Settled.</p>
+            </div>
+            <figure class="phone android crop b-phone" style="--w: 250px">
+              <div class="frame"><div class="screen">
+                <div class="bar"><span>9:41</span><svg viewBox="0 0 44 13" aria-hidden="true"><use href="#sb-android"/></svg></div><div class="island"></div>
+                <img src="img/screens/split-settle-440.webp" srcset="img/screens/split-settle-440.webp 440w, img/screens/split-settle-660.webp 660w" sizes="250px" width="440" height="890" loading="lazy" decoding="async"
+                  alt="Settle up with example data: three payments clear everyone instead of six.">
+              </div></div>
+            </figure>
+          </article>
+
+          <article class="b b-family">
+            <span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-family"/></svg></span>
+            <h3>Family budget <span class="tag-new">NEW</span></h3>
+            <p>One budget. Whole family.</p>
+            <div class="avatars" aria-hidden="true"><span style="background:#C9BCFF">S</span><span style="background:#7BED9F">O</span><span style="background:#F3CC88">L</span><span style="background:#FFB3C0">A</span><em>+8</em></div>
+          </article>
+
+          <article class="b b-reports">
+            <span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-chart"/></svg></span>
+            <h3>Reports</h3>
+            <p>Day, week, month or year.</p>
+            <div class="bars" aria-hidden="true"><i style="--h:46%"></i><i style="--h:72%"></i><i style="--h:38%"></i><i style="--h:88%" class="hi"></i><i style="--h:55%"></i><i style="--h:64%"></i></div>
+          </article>
+
+          <article class="b b-cloud b-wide">
+            <div class="b-txt">
+              <span class="ico green"><svg width="20" height="20" aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <h3>Cloud backup</h3><p>Every phone. Always in sync.</p>
+            </div>
+            <div class="sync-art" aria-hidden="true">
+              <span class="dev"><svg width="20" height="20"><use href="#i-phone"/></svg></span><i></i>
+              <span class="cloud"><svg width="20" height="20"><use href="#i-cloud"/></svg></span><i></i>
+              <span class="dev"><svg width="20" height="20"><use href="#i-device"/></svg></span>
+            </div>
+          </article>
+
+          <article class="b b-fx b-wide">
+            <div class="b-txt">
+              <span class="ico green"><svg width="20" height="20" aria-hidden="true"><use href="#i-swap"/></svg></span>
+              <h3>Currency converter</h3><p>Live rates. Any currency.</p>
+            </div>
+            <p class="fx" aria-label="Example: 250 US dollars is 222.05 euros"><b>$250</b><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg><b class="accent">€222.05</b></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Groups spotlight -->
+    <section class="section groups-band" id="groups" aria-labelledby="groups-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow"><span class="new">NEW</span> Groups</p>
+          <h2 class="h2" id="groups-title">Split the trip, <span class="accent">not the friendship.</span></h2>
+          <p class="lead">Two styles. Pick yours. Your personal money stays private.</p>
+        </div>
+        <div class="duo">
+          <figure class="duo-card">
+            <div class="duo-art">
+              <figure class="phone crop" style="--w: clamp(220px, 26vw, 290px)">
+                <div class="frame"><div class="screen">
+                  <div class="bar"><span>9:41</span><svg viewBox="0 0 70 13" aria-hidden="true"><use href="#sb-ios"/></svg></div><div class="island"></div>
+                  <img src="img/screens/split-home-660.webp" srcset="img/screens/split-home-440.webp 440w, img/screens/split-home-660.webp 660w" sizes="290px" width="660" height="1335" loading="lazy" decoding="async"
+                    alt="Split group with example data: you're owed €395.55 for a Lisbon trip.">
+                </div></div>
+              </figure>
+              <div class="float" style="right:2%;top:18%;transform:rotate(3deg)" aria-hidden="true"><span class="ico violet"><svg width="20" height="20"><use href="#i-check"/></svg></span><span><b>3 payments</b><small>instead of 6</small></span></div>
+            </div>
+            <figcaption><b>Split</b><span>Trips, flatmates, friends</span></figcaption>
+          </figure>
+          <figure class="duo-card">
+            <div class="duo-art green">
+              <figure class="phone android crop" style="--w: clamp(210px, 25vw, 278px)">
+                <div class="frame"><div class="screen">
+                  <div class="bar"><span>9:41</span><svg viewBox="0 0 44 13" aria-hidden="true"><use href="#sb-android"/></svg></div><div class="island"></div>
+                  <img src="img/screens/family-home-660.webp" srcset="img/screens/family-home-440.webp 440w, img/screens/family-home-660.webp 660w" sizes="278px" width="660" height="1335" loading="lazy" decoding="async"
+                    alt="Family group with example data: $4,407.45 of a $4,960 shared budget left.">
+                </div></div>
+              </figure>
+              <div class="float" style="left:2%;top:22%;transform:rotate(-3deg)" aria-hidden="true"><span class="avatars sm"><span style="background:#C9BCFF">S</span><span style="background:#7BED9F">O</span><span style="background:#F3CC88">L</span></span><span><b>Our Family</b><small>4 members</small></span></div>
+            </div>
+            <figcaption><b>Family</b><span>One shared budget at home</span></figcaption>
+          </figure>
+        </div>
+        <ul class="chips-row" aria-label="Group highlights">
+          <li>Own 1 Family + 1 Split with Pro+</li><li>Up to 12 people each</li><li>Joining is free</li><li>Owner, Admin, Member</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tour -->
+    <section class="section" id="tour" aria-labelledby="tour-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Take the tour</p>
+          <h2 class="h2" id="tour-title">See it in <span class="accent">action.</span></h2>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="carousel" aria-roledescription="carousel" aria-label="App screens">
+          <div class="carousel-track" tabindex="0" aria-live="off">
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 9">
+              <img src="img/gallery/shot-01-360.webp" srcset="img/gallery/shot-01-360.webp 360w, img/gallery/shot-01-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Know what you can spend today: the Money screen with this period's budget.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 9">
+              <img src="img/gallery/shot-02-360.webp" srcset="img/gallery/shot-02-360.webp 360w, img/gallery/shot-02-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Split trips without the awkward math: a Split group showing who's owed.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 9">
+              <img src="img/gallery/shot-03-360.webp" srcset="img/gallery/shot-03-360.webp 360w, img/gallery/shot-03-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="One budget for the whole family: a Family group's shared budget.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 9">
+              <img src="img/gallery/shot-04-360.webp" srcset="img/gallery/shot-04-360.webp 360w, img/gallery/shot-04-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Log spending in seconds: the Add expense sheet.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 9">
+              <img src="img/gallery/shot-05-360.webp" srcset="img/gallery/shot-05-360.webp 360w, img/gallery/shot-05-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Who paid? Who shares? Sorted: splitting a bill between friends.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 of 9">
+              <img src="img/gallery/shot-06-360.webp" srcset="img/gallery/shot-06-360.webp 360w, img/gallery/shot-06-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Give every dollar a job: category budgets.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 of 9">
+              <img src="img/gallery/shot-07-360.webp" srcset="img/gallery/shot-07-360.webp 360w, img/gallery/shot-07-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="See where your money goes: monthly and yearly reports.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="8 of 9">
+              <img src="img/gallery/shot-08-360.webp" srcset="img/gallery/shot-08-360.webp 360w, img/gallery/shot-08-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Settle up in fewer payments: the settle-up list.">
+            </figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="9 of 9">
+              <img src="img/gallery/shot-09-360.webp" srcset="img/gallery/shot-09-360.webp 360w, img/gallery/shot-09-540.webp 540w" sizes="(max-width: 520px) 78vw, (max-width: 760px) 46vw, 300px" width="360" height="782" loading="lazy" decoding="async" alt="Convert currencies on the go: the currency converter.">
+            </figure>
           </div>
-          <ul>
-            <li>✓ Personal backup &amp; restore across devices</li>
-            <li>✓ Unlimited personal exports · up to 14 categories</li>
-            <li>✓ Own 1 group (7 seats) · invitees free</li>
-            <li>✓ Ad-free · 55 receipt AI scans / month</li>
-          </ul>
-        </article>
-      </div>
-      <p style="text-align:center;color:var(--muted);font-size:14px;line-height:1.6;max-width:40rem;margin:20px auto 0">
-        There is no separate Group Lifetime product. Legacy Family subscriptions (if any) are not sold as a new plan.
-      </p>
-      <div class="pricing-cta">
-        <a class="btn btn-primary" href="#testers">Join the list to install →</a>
-      </div>
-    </section>
-
-    <section id="feedback" class="section feedback">
-      <div class="feedback-panel">
-        <div class="feedback-copy">
-          <div class="eyebrow">AFTER YOUR TEST</div>
-          <h2>Tell us what felt hard</h2>
-          <p>
-            Feedback helps shape RatePocket.
-          </p>
-          <div class="feedback-actions">
-            <a class="btn btn-primary" href="mailto:support.tradali@gmail.com?subject=RatePocket%20closed%20test%20feedback">Email feedback →</a>
-            <a
-              class="btn btn-outline"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdqYBE1KaDMo2OUMkQHVsxYX60PA3T_Y0mqqHyJjTjnB-pN6g/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Feedback form</a>
+          <div class="carousel-ui">
+            <button type="button" class="c-btn c-prev" aria-label="Previous screens"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="c-dots" role="group" aria-label="Choose screens"></div>
+            <button type="button" class="c-btn c-pause" aria-label="Pause slideshow" aria-pressed="false"><svg class="i-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><svg class="i-play" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button>
+            <button type="button" class="c-btn c-next" aria-label="Next screens"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section faq">
-      <h2>Questions people actually ask</h2>
-      <div class="faq-list" id="faq-list">
-        <div class="faq-item open" data-index="0">
-          <button type="button" class="faq-q" aria-expanded="true">
-            <span>What problem does RatePocket solve?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">It answers “how much can I spend today?” and lets you log Pay Day, freelance, tips, and expenses in the same place. The Today homepage and History → Reports use that ledger so income, spending, and recorded surplus stay in one picture — personally or in an owner-funded group.</div></div>
+    <!-- Plans -->
+    <section class="section" id="plans" aria-labelledby="plans-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Plans</p>
+          <h2 class="h2" id="plans-title">Start free. <span class="accent">Upgrade if you want.</span></h2>
         </div>
-        <div class="faq-item" data-index="1">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>How do I join closed testing?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner"><a href="https://forms.gle/pYdKT3ir3ttVC4CcA" target="_blank" rel="noopener noreferrer">Join the email list</a> by <strong>1 Nov 2026</strong> (testing begins <strong>1 Oct 2026</strong>) → we add you to Play testers → we email you the private install link → install from that email on Android. Then use the app and send feedback. Your test ends when you complete the required tasks and send the proof.</div></div>
+
+        <div class="plans">
+          <article class="plan" aria-labelledby="plan-free">
+            <h3 id="plan-free">Free</h3>
+            <p class="blurb">Run your own budget.</p>
+            <div class="price"><b>$0</b></div>
+            <div class="price-alt">No account needed</div>
+            <ul>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Budget, income &amp; reports</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Converter &amp; calculator</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Up to 2 categories</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Join 1 Family + 1 Split group</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>2 AI scans to try</span></li>
+              <li class="minus"><svg width="20" height="20" aria-hidden="true"><use href="#i-minus"/></svg><span>Shows ads</span></li>
+            </ul>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-personal">
+            <h3 id="plan-personal">Personal</h3>
+            <p class="blurb">Backed up. Synced. No ads.</p>
+            <div class="price"><b>$3.99</b><span>/ month</span></div>
+            <div class="price-alt">or $39.99 / year · <strong>save 16%</strong></div>
+            <ul>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span><b>Everything in Free</b></span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Backup &amp; sync</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>No ads</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Up to 14 categories</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Unlimited exports</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>35 AI scans a month</span></li>
+            </ul>
+          </article>
+
+          <article class="plan featured" aria-labelledby="plan-pro">
+            <span class="plan-badge">GROUPS</span>
+            <h3 id="plan-pro">Pro+</h3>
+            <p class="blurb">Share money with your people.</p>
+            <div class="price"><b>$7.99</b><span>/ month</span></div>
+            <div class="price-alt">or $79.99 / year · <strong>save 16%</strong></div>
+            <ul>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span><b>Everything in Personal</b></span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span><b>Create 2 groups:</b> 1 Family + 1 Split</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>Up to 12 people in each</span></li>
+              <li><svg width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg><span>100 AI scans a month</span></li>
+            </ul>
+            <div class="spaces" role="img" aria-label="Up to 5 spaces with Pro+: your Personal space, a Family group and a Split group you own, plus one Family and one Split group you can join for free.">
+              <p class="spaces-title" aria-hidden="true">Up to 5 spaces</p>
+              <div class="spaces-row" aria-hidden="true">
+                <span class="sp"><svg width="16" height="16"><use href="#i-phone"/></svg>Personal</span>
+                <span class="sp own"><svg width="16" height="16"><use href="#i-family"/></svg>Family</span>
+                <span class="sp own"><svg width="16" height="16"><use href="#i-split"/></svg>Split</span>
+              </div>
+              <p class="spaces-join" aria-hidden="true">Own both groups, and join 1 Family + 1 Split for free.</p>
+            </div>
+          </article>
         </div>
-        <div class="faq-item" data-index="2">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Can I track freelance and salary?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Yes — income sources include Pay Day (salary), freelance, delivery, tips, and other. Spending uses separate categories. Both show on Today and in History → Reports for the period you choose. Recorded surplus is income minus expenses for that range — not a bank balance or guaranteed savings.</div></div>
+
+        <ul class="chips-row" aria-label="Good to know">
+          <li>Joining a group is free</li><li>Export once: $0.99</li><li>Lifetime Export Pass still honoured</li>
+        </ul>
+        <p class="fine center">Prices in USD. Your store shows your local price before you pay. Subscriptions renew until you cancel in your App Store or Google Play account. <a href="terms/#plans">Full plan terms</a></p>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section" id="privacy" aria-labelledby="privacy-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Privacy</p>
+          <h2 class="h2" id="privacy-title">Your money. <span class="accent">Your data.</span></h2>
         </div>
-        <div class="faq-item" data-index="3">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Can my family track money together?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Yes — with <strong>Cloud Backup</strong>, the Owner creates one shared group (7 seats). Invited Admins and Members join free. Personal spending stays separate. While the Owner’s Cloud is active, Owner and Admin can write shared money; Members can read. If the Owner’s Cloud expires, the group becomes read-only (Owner/Admin can still export historical group data as implemented in the app).</div></div>
-        </div>
-        <div class="faq-item" data-index="4">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Do I need an account to start?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">No for personal local tracking. Google sign-in is required for Cloud Backup, creating/joining groups, Lifetime Export Pass purchase, and Play closed testing.</div></div>
-        </div>
-        <div class="faq-item" data-index="5">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Is the core app free?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Yes — Today Available, income &amp; spend, calculator, converter, and basic categories are free (with ads). Optional: $0.99 export credit, $6.99 Lifetime Export Pass, or Cloud Backup ($3.99/mo or $39.99/yr) for sync, ad-free use, higher AI quota, and owning a group. Invitees do not need Cloud to join.</div></div>
-        </div>
-        <div class="faq-item" data-index="6">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Which languages are supported?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">English, French, Spanish, Arabic, and Urdu. You can change language in Settings; it does not change your currency.</div></div>
-        </div>
-        <div class="faq-item" data-index="7">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>Is RatePocket on the iOS App Store?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Not yet — availability on the iOS App Store is coming very soon. Android closed testing continues via the join list above. Be prepared for the App Store launch.</div></div>
-        </div>
-        <div class="faq-item" data-index="8">
-          <button type="button" class="faq-q" aria-expanded="false">
-            <span>How do I delete my data?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AC" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Use in-app Settings → Account &amp; data, the <a href="delete-account/">Delete account</a> page, or email support.tradali@gmail.com. If you own a group, export or delete that group first, then delete the account.</div></div>
+        <ul class="trust-grid">
+          <li><span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-bank-off"/></svg></span><b>No bank login</b><p>You choose what goes in.</p></li>
+          <li><span class="ico green"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg></span><b>No account needed</b><p>Data stays on your phone.</p></li>
+          <li><span class="ico violet"><svg width="20" height="20" aria-hidden="true"><use href="#i-eu"/></svg></span><b>EU cloud</b><p>Backups stored in Paris.</p></li>
+          <li><span class="ico pink"><svg width="20" height="20" aria-hidden="true"><use href="#i-trash"/></svg></span><b>Delete anytime</b><p>Device, cloud, group or account.</p></li>
+        </ul>
+        <div class="link-row center">
+          <a class="btn btn-ghost btn-sm" href="privacy/">Privacy Policy</a>
+          <a class="btn btn-ghost btn-sm" href="privacy/#gdpr">GDPR rights</a>
+          <a class="btn btn-ghost btn-sm" href="delete-account/">Delete account &amp; data</a>
+          <a class="btn btn-ghost btn-sm" href="terms/">Terms of Use</a>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="footer-brand">
-        <img class="brand-logo sm" src="brand/ratepocket-mark-purple.svg" width="22" height="22" alt="" decoding="async">
-        <span class="footer-name">RatePocket</span>
-        <span class="footer-copy">© 2026 · by <a href="https://tradali.com/">Tradali</a></span>
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title">Quick answers</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>When can I download it?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>Soon, on the App Store and Google Play. The buttons here will link to each store the day it's live.</p></div>
+          </details>
+          <details>
+            <summary>Is it really free?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>Yes. Budget, income, reports and the converter are free, with ads. Plans add backup, no ads, more scans and groups.</p></div>
+          </details>
+          <details>
+            <summary>Family or Split: what's the difference?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>Family shares one budget. Split tracks who paid and who owes, then helps you settle up. You pick the style when you create the group.</p></div>
+          </details>
+          <details>
+            <summary>Can my group see my personal spending?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>No. Your Personal space is never shared. Groups only see what's added to the group.</p></div>
+          </details>
+          <details>
+            <summary>Does it connect to my bank?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>No. You add entries yourself or scan a receipt. No bank login, ever.</p></div>
+          </details>
+          <details>
+            <summary>How do I delete my data?<svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <div class="a"><p>In the app: Settings → Data &amp; privacy → Clear data &amp; more. Details on the <a href="delete-account/">deletion page</a>.</p></div>
+          </details>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#testers">Join list</a>
-        <a href="#pricing">Pricing</a>
-        <a href="terms/">Terms</a>
-        <a href="privacy/">Privacy</a>
-        <a href="delete-account/">Delete account</a>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="wrap" id="get" aria-labelledby="get-title">
+      <div class="cta-band">
+        <div class="cta-copy">
+          <h2 class="h2" id="get-title">Stop guessing. <span class="accent">Start knowing.</span></h2>
+          <p class="lead">Coming soon to iPhone and Android.</p>
+          <div class="stores">
+            <span class="store soon" role="img" aria-label="iPhone app: coming soon to the App Store">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span><small>COMING SOON</small><strong>App Store</strong></span>
+            </span>
+            <span class="store soon" role="img" aria-label="Android app: coming soon to Google Play">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-device"/></svg>
+              <span><small>COMING SOON</small><strong>Google Play</strong></span>
+            </span>
+          </div>
+          <p class="support">Questions? <a href="mailto:support.tradali@gmail.com">support.tradali@gmail.com</a></p>
+        </div>
+        <div class="cta-art" aria-hidden="true">
+          <figure class="phone crop" style="--w: 240px">
+            <div class="frame"><div class="screen">
+              <div class="bar"><span>9:41</span><svg viewBox="0 0 70 13"><use href="#sb-ios"/></svg></div><div class="island"></div>
+              <img src="img/screens/reports-440.webp" width="440" height="890" loading="lazy" decoding="async" alt="">
+            </div></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <div>
+        <a class="brand" href="/"><img src="brand/ratepocket-mark-purple.svg" width="26" height="26" alt="">RatePocket</a>
+        <p class="by">© 2026 RatePocket by <a href="https://tradali.com/">Tradali</a> · App screens show example data.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#plans">Plans</a>
+        <a href="privacy/">Privacy Policy</a>
+        <a href="privacy/#gdpr">GDPR rights</a>
+        <a href="terms/">Terms of Use</a>
+        <a href="delete-account/">Delete account &amp; data</a>
         <a href="mailto:support.tradali@gmail.com">Support</a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="app.js" defer></script>
+      </nav>
+    </div>
+  </footer>
+  <script src="site.js?v=8ce0d4c0" defer></script>
 </body>
 </html>

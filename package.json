@@ -2,11 +2,12 @@
   "name": "tradali-calculator-landing",
   "private": true,
   "version": "1.0.0",
-  "description": "RatePocket product landing — ratepocket.tradali.com",
+  "description": "RatePocket product landing \u2014 ratepocket.tradali.com",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "preview": "wrangler versions upload"
+    "deploy": "node scripts/stamp-assets.mjs && wrangler deploy",
+    "preview": "wrangler versions upload",
+    "stamp": "node scripts/stamp-assets.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.131.1"
