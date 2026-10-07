@@ -7,7 +7,7 @@ const NTFY_TOPIC = "ratepocket-testers-dstfwc0r";
 // App / Universal Links for group QR codes (https://ratepocket.tradali.com/join?code=...).
 // Fill in both values below; until then the two files are not served and links open this site.
 // Apple: Team ID from developer.apple.com > Membership details.
-const APPLE_TEAM_ID = "";
+const APPLE_TEAM_ID = "76XAHQCFZ6";
 // Android: SHA-256 of the Play app signing key (Play Console > Setup > App signing), and the
 // upload key (sideloaded / local release builds).
 const ANDROID_APP_SHA256 = [
