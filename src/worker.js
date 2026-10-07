@@ -8,10 +8,10 @@ const NTFY_TOPIC = "ratepocket-testers-dstfwc0r";
 // Fill in both values below; until then the two files are not served and links open this site.
 // Apple: Team ID from developer.apple.com > Membership details.
 const APPLE_TEAM_ID = "76XAHQCFZ6";
-// Android: SHA-256 of the Play app signing key (Play Console > App signing; owner, 2026-10-07)
-// and of the upload key (local release builds). Here they are the same key.
+// Android: SHA-256 of the Play app signing key (Play Console > App signing > classical key, which
+// Play signs installs with) and of the upload key (local release builds / sideloaded AABs).
 const PLAY_APP_SIGNING_SHA256 =
-  "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6";
+  "3D:91:85:4E:15:33:C2:A1:95:6C:A1:D9:F2:A6:25:90:ED:68:EC:3D:E4:0B:A5:39:7C:63:E4:BD:5B:C5:CB:DF";
 const UPLOAD_KEY_SHA256 =
   "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6";
 const ANDROID_APP_SHA256 = [...new Set([PLAY_APP_SIGNING_SHA256, UPLOAD_KEY_SHA256].filter(Boolean))];
