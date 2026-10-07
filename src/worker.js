@@ -8,12 +8,13 @@ const NTFY_TOPIC = "ratepocket-testers-dstfwc0r";
 // Fill in both values below; until then the two files are not served and links open this site.
 // Apple: Team ID from developer.apple.com > Membership details.
 const APPLE_TEAM_ID = "76XAHQCFZ6";
-// Android: SHA-256 of the Play app signing key (Play Console > Setup > App signing), and the
-// upload key (sideloaded / local release builds).
-const ANDROID_APP_SHA256 = [
-  "",
-  "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6",
-].filter(Boolean);
+// Android: SHA-256 of the Play app signing key (Play Console > App signing; owner, 2026-10-07)
+// and of the upload key (local release builds). Here they are the same key.
+const PLAY_APP_SIGNING_SHA256 =
+  "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6";
+const UPLOAD_KEY_SHA256 =
+  "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6";
+const ANDROID_APP_SHA256 = [...new Set([PLAY_APP_SIGNING_SHA256, UPLOAD_KEY_SHA256].filter(Boolean))];
 const APP_PACKAGE = "com.tradali.calculator";
 
 function wellKnown(path) {
@@ -24,7 +25,7 @@ function wellKnown(path) {
       },
     };
   }
-  if (path === "/.well-known/assetlinks.json" && ANDROID_APP_SHA256.length > 1) {
+  if (path === "/.well-known/assetlinks.json" && PLAY_APP_SIGNING_SHA256) {
     return [
       {
         relation: ["delegate_permission/common.handle_all_urls"],
