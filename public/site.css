@@ -388,7 +388,7 @@ a.store:hover { border-color: var(--violet); color: #fff; }
 }
 .note-chip { align-self: flex-start; margin-top: 8px; font-size: 13px !important; font-weight: 700 !important; color: var(--green) !important; background: rgba(123,237,159,.10); border: 1px solid rgba(123,237,159,.3); padding: 4px 10px; border-radius: 999px; }
 
-/* Pro+ "up to 5 spaces" strip */
+/* Pro+ "up to 23 spaces" strip */
 .spaces { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(138,112,255,.08); border: 1px solid rgba(138,112,255,.28); }
 .spaces-title { margin: 0 0 10px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--violet-text); }
 .spaces-row { display: flex; flex-wrap: wrap; gap: 8px; }
