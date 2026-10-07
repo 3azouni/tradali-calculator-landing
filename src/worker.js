@@ -223,7 +223,13 @@ export default {
       if (path === "/api/join") return handleJoin(request, env);
       if (path === "/api/signups") return handleSignupsList(request, env);
 
-      if (path === "/auth/callback" || path === "/invite" || path === "/join") {
+      // A scanned QR code (/join?code=...) gets the page at once: no redirect to /join/ first.
+      let assetRequest = request;
+      if (url.pathname === "/join") {
+        const page = new URL(url.toString());
+        page.pathname = "/join/";
+        assetRequest = new Request(page.toString(), request);
+      } else if (path === "/auth/callback" || path === "/invite" || path === "/join") {
         const bridge = new URL(url.toString());
         bridge.pathname = `${path}/`;
         if (bridge.pathname !== url.pathname) {
@@ -240,7 +246,7 @@ export default {
         return Response.redirect(target.toString(), 302);
       }
 
-      const response = await env.ASSETS.fetch(request);
+      const response = await env.ASSETS.fetch(assetRequest);
       const headers = new Headers(response.headers);
       const assetPath = url.pathname;
 

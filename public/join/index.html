@@ -92,13 +92,40 @@
     .steps li { margin-bottom: 6px; }
     .muted { color: #8f8fa0; font-size: 0.85rem; }
     .home { color: #a78bfa; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .opening {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 8px 0 20px;
+      color: #d5d5de;
+      font-weight: 700;
+    }
+    .spinner {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 3px solid #2a2a36;
+      border-top-color: #8b5cf6;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation: none; border-top-color: #2a2a36; background: #8b5cf6; transform: scale(0.45); }
+    }
     [hidden] { display: none !important; }
   </style>
+  <noscript><style>#opening { display: none !important; } #fallback { display: block !important; }</style></noscript>
 </head>
 <body>
   <main class="card">
     <img class="logo" src="/brand/logo-r.png" alt="" width="56" height="56">
     <h1 id="title">You're invited to a group</h1>
+    <div id="opening" class="opening" role="status" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <span id="openingText">Opening RatePocket…</span>
+    </div>
+    <div id="fallback" hidden>
     <p id="lead">Open this invite in the RatePocket app to see the group and join it.</p>
     <div id="codeBox" class="code-box" hidden>
       <span id="codeLabel" class="label">Invite code</span>
@@ -113,12 +140,14 @@
     </ol>
     <p id="soon" class="muted">RatePocket is coming soon to iPhone and Android.</p>
     <a id="home" class="home" href="/">ratepocket.tradali.com</a>
+    </div>
   </main>
   <script>
     (function () {
       // Same wording as the app (family:join* keys). No network calls: the app checks the code.
       var STRINGS = {
         en: {
+          opening: 'Opening RatePocket…',
           title: "You're invited to a group",
           lead: 'Open this invite in the RatePocket app to see the group and join it.',
           codeLabel: 'Invite code',
@@ -133,6 +162,7 @@
           badLead: 'Ask the person who invited you to share the link or the code again.'
         },
         fr: {
+          opening: 'Ouverture de RatePocket…',
           title: 'Vous êtes invité à rejoindre un groupe',
           lead: 'Ouvrez cette invitation dans l’app RatePocket pour voir le groupe et le rejoindre.',
           codeLabel: 'Code d’invitation',
@@ -147,6 +177,7 @@
           badLead: 'Demandez à la personne qui vous a invité de partager à nouveau le lien ou le code.'
         },
         es: {
+          opening: 'Abriendo RatePocket…',
           title: 'Te invitaron a un grupo',
           lead: 'Abre esta invitación en la app RatePocket para ver el grupo y unirte.',
           codeLabel: 'Código de invitación',
@@ -161,6 +192,7 @@
           badLead: 'Pide a quien te invitó que vuelva a compartir el enlace o el código.'
         },
         ar: {
+          opening: 'جارٍ فتح RatePocket…',
           title: 'تمت دعوتك إلى مجموعة',
           lead: 'افتح هذه الدعوة في تطبيق RatePocket لرؤية المجموعة والانضمام إليها.',
           codeLabel: 'رمز الدعوة',
@@ -175,6 +207,7 @@
           badLead: 'اطلب من الشخص الذي دعاك مشاركة الرابط أو الرمز مرة أخرى.'
         },
         ur: {
+          opening: 'RatePocket کھل رہا ہے…',
           title: 'آپ کو ایک گروپ میں مدعو کیا گیا ہے',
           lead: 'گروپ دیکھنے اور اس میں شامل ہونے کے لیے یہ دعوت RatePocket ایپ میں کھولیں۔',
           codeLabel: 'دعوتی کوڈ',
@@ -215,7 +248,13 @@
       var valid = /^[0-9A-HJKMNP-TV-Z]{10}$/.test(code);
 
       text('soon', s.soon);
+      text('openingText', s.opening);
+      function showFallback() {
+        show('opening', false);
+        show('fallback', true);
+      }
       if (!valid) {
+        showFallback();
         document.title = s.badTitle;
         text('title', s.badTitle);
         text('lead', s.badLead);
@@ -224,6 +263,17 @@
 
       var shown = code.slice(0, 5) + '-' + code.slice(5);
       var appLink = 'ratepocket://family/join?code=' + code;
+      // Android: Chrome opens the app straight from an intent link (a plain ratepocket:// link
+      // opened without a tap is often blocked); without the app it comes back here (noapp=1).
+      var isAndroid = /Android/i.test(navigator.userAgent || '');
+      var noApp = params.get('noapp') === '1';
+      if (isAndroid) {
+        var back = new URL(window.location.href);
+        back.searchParams.set('noapp', '1');
+        appLink = 'intent://family/join?code=' + code +
+          '#Intent;scheme=ratepocket;package=com.tradali.calculator;S.browser_fallback_url=' +
+          encodeURIComponent(back.toString()) + ';end';
+      }
       document.title = s.title;
       text('title', s.title);
       text('lead', s.lead);
@@ -250,15 +300,28 @@
       });
 
       // Like /invite: try the app once when the page opens (not again after coming back).
+      // "Opening RatePocket…" shows meanwhile; the code and steps appear if the app did not open.
+      var tryApp = false;
       try {
         var key = 'rp_join_opened_' + code;
-        if (!sessionStorage.getItem(key)) {
+        if (!noApp && !sessionStorage.getItem(key)) {
           sessionStorage.setItem(key, '1');
-          window.location.href = appLink;
+          tryApp = true;
         }
       } catch (e) {
         /* storage blocked: the button still works */
       }
+      if (!tryApp) {
+        showFallback();
+        return;
+      }
+      var fallbackTimer = setTimeout(showFallback, 2500);
+      document.addEventListener('visibilitychange', function () {
+        // Hidden: the app opened. Visible again: the person came back, so show the code.
+        if (document.hidden) clearTimeout(fallbackTimer);
+        else showFallback();
+      });
+      window.location.href = appLink;
     })();
   </script>
 </body>
