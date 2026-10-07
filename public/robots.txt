@@ -4,5 +4,6 @@ Allow: /
 Disallow: /api/
 Disallow: /auth/callback
 Disallow: /invite
+Disallow: /join
 
 Sitemap: https://ratepocket.tradali.com/sitemap.xml

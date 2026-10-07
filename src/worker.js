@@ -223,12 +223,21 @@ export default {
       if (path === "/api/join") return handleJoin(request, env);
       if (path === "/api/signups") return handleSignupsList(request, env);
 
-      if (path === "/auth/callback" || path === "/invite") {
+      if (path === "/auth/callback" || path === "/invite" || path === "/join") {
         const bridge = new URL(url.toString());
         bridge.pathname = `${path}/`;
         if (bridge.pathname !== url.pathname) {
           return Response.redirect(bridge.toString(), 302);
         }
+      }
+
+      // Group invite link in path form (/join/K7QM2-XPA9D): same page, code as a query.
+      const joinPath = path.match(/^\/join\/([0-9A-Za-z-]{10,11})$/);
+      if (joinPath) {
+        const target = new URL(url.toString());
+        target.pathname = "/join/";
+        target.search = `?code=${encodeURIComponent(joinPath[1])}`;
+        return Response.redirect(target.toString(), 302);
       }
 
       const response = await env.ASSETS.fetch(request);
