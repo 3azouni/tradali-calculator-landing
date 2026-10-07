@@ -4,6 +4,41 @@ const LEGACY_HOST = "calculator.tradali.com";
 const SUPPORT_EMAIL = "support.tradali@gmail.com";
 const NTFY_TOPIC = "ratepocket-testers-dstfwc0r";
 
+// App / Universal Links for group QR codes (https://ratepocket.tradali.com/join?code=...).
+// Fill in both values below; until then the two files are not served and links open this site.
+// Apple: Team ID from developer.apple.com > Membership details.
+const APPLE_TEAM_ID = "";
+// Android: SHA-256 of the Play app signing key (Play Console > Setup > App signing), and the
+// upload key (sideloaded / local release builds).
+const ANDROID_APP_SHA256 = [
+  "",
+  "5A:F8:65:70:42:94:3C:C5:AB:DA:B7:B6:D8:45:EB:BD:52:2A:10:37:9A:64:D2:38:B7:C0:2C:49:51:A7:29:D6",
+].filter(Boolean);
+const APP_PACKAGE = "com.tradali.calculator";
+
+function wellKnown(path) {
+  if (path === "/.well-known/apple-app-site-association" && /^[A-Z0-9]{10}$/.test(APPLE_TEAM_ID)) {
+    return {
+      applinks: {
+        details: [{ appIDs: [`${APPLE_TEAM_ID}.${APP_PACKAGE}`], components: [{ "/": "/join*" }] }],
+      },
+    };
+  }
+  if (path === "/.well-known/assetlinks.json" && ANDROID_APP_SHA256.length > 1) {
+    return [
+      {
+        relation: ["delegate_permission/common.handle_all_urls"],
+        target: {
+          namespace: "android_app",
+          package_name: APP_PACKAGE,
+          sha256_cert_fingerprints: ANDROID_APP_SHA256,
+        },
+      },
+    ];
+  }
+  return null;
+}
+
 function isLocalHost(hostname) {
   return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "[::1]";
 }
@@ -219,6 +254,16 @@ export default {
 
     if (isProductHost(url.hostname) || url.hostname.endsWith(".workers.dev")) {
       const path = url.pathname.replace(/\/+$/, "") || "/";
+
+      const linkFile = wellKnown(url.pathname);
+      if (linkFile) {
+        return new Response(JSON.stringify(linkFile), {
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
+      }
 
       if (path === "/api/join") return handleJoin(request, env);
       if (path === "/api/signups") return handleSignupsList(request, env);
