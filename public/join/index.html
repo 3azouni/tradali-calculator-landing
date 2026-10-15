@@ -138,7 +138,8 @@
       <li id="step2">Tap the workspace name at the top, then “Join a group with a code”.</li>
       <li id="step3">Enter the code above.</li>
     </ol>
-    <p id="soon" class="muted">RatePocket is coming soon to iPhone and Android.</p>
+    <p id="soon" class="muted">RatePocket is on Google Play now. Coming soon to iPhone.</p>
+    <a id="play" class="home" href="https://play.google.com/store/apps/details?id=com.tradali.calculator" target="_blank" rel="noopener">Get it on Google Play</a>
     <a id="home" class="home" href="/">ratepocket.tradali.com</a>
     </div>
   </main>
@@ -157,7 +158,8 @@
           step1: 'Open RatePocket on this phone.',
           step2: 'Tap the workspace name at the top, then “Join a group with a code”.',
           step3: 'Enter the code above.',
-          soon: 'RatePocket is coming soon to iPhone and Android.',
+          soon: 'RatePocket is on Google Play now. Coming soon to iPhone.',
+          play: 'Get it on Google Play',
           badTitle: 'This invite link is incomplete',
           badLead: 'Ask the person who invited you to share the link or the code again.'
         },
@@ -172,7 +174,8 @@
           step1: 'Ouvrez RatePocket sur ce téléphone.',
           step2: 'Touchez le nom de l’espace en haut, puis « Rejoindre un groupe avec un code ».',
           step3: 'Saisissez le code ci-dessus.',
-          soon: 'RatePocket arrive bientôt sur iPhone et Android.',
+          soon: 'RatePocket est disponible sur Google Play. Bientôt sur iPhone.',
+          play: 'Disponible sur Google Play',
           badTitle: 'Ce lien d’invitation est incomplet',
           badLead: 'Demandez à la personne qui vous a invité de partager à nouveau le lien ou le code.'
         },
@@ -187,7 +190,8 @@
           step1: 'Abre RatePocket en este teléfono.',
           step2: 'Toca el nombre del espacio arriba y luego «Unirse a un grupo con un código».',
           step3: 'Introduce el código de arriba.',
-          soon: 'RatePocket llegará pronto a iPhone y Android.',
+          soon: 'RatePocket ya está en Google Play. Pronto en iPhone.',
+          play: 'Disponible en Google Play',
           badTitle: 'Este enlace de invitación está incompleto',
           badLead: 'Pide a quien te invitó que vuelva a compartir el enlace o el código.'
         },
@@ -202,7 +206,8 @@
           step1: 'افتح RatePocket على هذا الهاتف.',
           step2: 'اضغط على اسم مساحة العمل في الأعلى، ثم «الانضمام إلى مجموعة برمز».',
           step3: 'أدخل الرمز أعلاه.',
-          soon: 'RatePocket قريبًا على iPhone وAndroid.',
+          soon: 'RatePocket متوفر الآن على Google Play، وقريبًا على iPhone.',
+          play: 'احصل عليه من Google Play',
           badTitle: 'رابط الدعوة هذا غير مكتمل',
           badLead: 'اطلب من الشخص الذي دعاك مشاركة الرابط أو الرمز مرة أخرى.'
         },
@@ -217,7 +222,8 @@
           step1: 'اس فون پر RatePocket کھولیں۔',
           step2: 'اوپر ورک اسپیس کے نام پر ٹیپ کریں، پھر “کوڈ سے گروپ میں شامل ہوں”۔',
           step3: 'اوپر دیا گیا کوڈ درج کریں۔',
-          soon: 'RatePocket جلد iPhone اور Android پر آ رہا ہے۔',
+          soon: 'RatePocket اب Google Play پر دستیاب ہے، اور جلد iPhone پر آ رہا ہے۔',
+          play: 'Google Play سے حاصل کریں',
           badTitle: 'یہ دعوتی لنک نامکمل ہے',
           badLead: 'جس نے آپ کو مدعو کیا ہے اس سے لنک یا کوڈ دوبارہ شیئر کرنے کو کہیں۔'
         }
@@ -248,6 +254,7 @@
       var valid = /^[0-9A-HJKMNP-TV-Z]{10}$/.test(code);
 
       text('soon', s.soon);
+      text('play', s.play);
       text('openingText', s.opening);
       function showFallback() {
         show('opening', false);
