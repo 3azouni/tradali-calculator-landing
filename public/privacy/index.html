@@ -40,7 +40,7 @@
     <article class="legal">
       <p class="crumb"><a href="../">RatePocket</a> / Privacy Policy</p>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated 6 October 2026 · Applies to the RatePocket app for iPhone and Android (com.tradali.calculator) and this website.</p>
+      <p class="updated">Last updated 31 October 2026 · Applies to the RatePocket app for iPhone and Android (com.tradali.calculator) and this website.</p>
 
       <section class="summary" aria-labelledby="sum">
         <h2 id="sum">The short version</h2>
@@ -86,14 +86,14 @@
       <p>With a Personal or Pro+ plan and signed in, your personal entries, budget periods and preferences are stored in our database so you can restore and sync them on your other devices.</p>
 
       <h3>2.4 Groups (Family and Split)</h3>
-      <p>When you create or join a group we store: the group's name, style (Family or Split), currency and time zone; members, roles (Owner, Admin, Member) and display names; invitations (the invited email address and status); the group's shared entries, budget and categories; for Split groups, who paid, each person's share, payments between members and trips; and an activity log (who added or changed what). Every member of a group can see that group's shared data, according to their role. Your Personal space is never shared with a group.</p>
+      <p>When you create or join a group we store: the group's name, style (Family or Split), currency and time zone; members, roles (Owner, Admin, Member) and display names; invitations (the invited email address and status), invite links and join requests; the group's shared entries, budget, categories and upcoming bills; for Family groups, shared savings; for Split groups, who paid, each person's share, payments between members and trips; and an activity log (who added or changed what). Every member of a group can see that group's shared data, according to their role. Your Personal space is never shared with a group.</p>
 
       <h3 id="scan">2.5 AI receipt scan</h3>
-      <p>Scanning is optional and starts only when you choose Camera or Gallery. The receipt image goes through our server function straight to the <strong>OpenAI API</strong>, which reads the shop, date, currency and items. You review the result before anything is saved.</p>
+      <p>Scanning is optional. The app asks for your permission the first time you scan, and remembers your answer for your account on that phone; you can turn it off at any time in <strong>Settings &gt; Data &amp; privacy</strong>, and the app then asks again before the next scan. The receipt image goes through our server function to <strong>Claude</strong>, Anthropic's AI service, which reads the shop, date, currency and items. If Claude can't read it (for example it has no credit left, is busy or fails), the same image is sent to <strong>ChatGPT</strong>, OpenAI's AI service, instead; in that case both services receive it. You review the result before anything is saved, and the review shows which service read it. Older versions of the app send the image to ChatGPT (OpenAI) only and ask before every scan.</p>
       <ul>
         <li><strong>RatePocket never saves receipt images or screenshots</strong>, not in our database and not in any file storage. The image exists only for the moment it takes to read it.</li>
         <li>We keep a <strong>scan counter</strong> per account (or per install, if you're not signed in) to apply your plan's limit: 2 trial scans on Free, 35 a month with Personal, 100 a month with Pro+.</li>
-        <li>OpenAI's API doesn't use the image to train its models. Under OpenAI's own API policy, OpenAI may keep request data for up to 30 days for abuse monitoring before deleting it.</li>
+        <li>Neither Anthropic nor OpenAI uses the image to train its models. Under their own API policies, each normally deletes request data within 30 days; it can be kept longer only if it is flagged for a policy violation or the law requires it.</li>
       </ul>
 
       <h3>2.6 Purchases</h3>
@@ -106,13 +106,13 @@
       <p>On Android, some sensitive actions are checked with Google's <strong>Play Integrity API</strong>, which confirms the request comes from the genuine app on a real device.</p>
 
       <h3>2.9 Notifications</h3>
-      <p>If you allow notifications, we store your device's push token so we can tell you about group activity (for example, a new shared expense or a payment reminder). Push messages are delivered through <strong>Expo</strong> and Apple or Google's push services.</p>
+      <p>If you allow notifications, we store your device's push token so we can tell you about group activity (for example, a new shared expense or a payment reminder). Reminders for your own upcoming bills and paydays are scheduled on your phone and don't use the push token. Push messages are delivered through <strong>Expo</strong> and Apple or Google's push services.</p>
 
       <h3>2.10 Emails</h3>
       <p>We send sign-in codes, group invitations and, when a group is deleted, a copy of that group's data to its members. These emails are sent through <strong>Resend</strong>.</p>
 
       <h3>2.11 Exchange rates</h3>
-      <p>The app downloads currency rates from <strong>exchangerate.fun</strong>. This is a normal web request from your phone. It doesn't include your entries.</p>
+      <p>The app downloads currency rates from <strong>exchangerate.fun</strong>, or, if it's unavailable, from <strong>open.er-api.com</strong> or the free <strong>currency-api</strong> (currency-api.pages.dev or jsDelivr). This is a normal web request from your phone. It doesn't include your entries.</p>
 
       <h3>2.12 Support</h3>
       <p>If you email us, we process your message and anything you include in it.</p>
@@ -141,14 +141,15 @@
           <thead><tr><th scope="col">Provider</th><th scope="col">What for</th><th scope="col">Where</th></tr></thead>
           <tbody>
             <tr><td data-label="Provider">Supabase</td><td data-label="What for">Database, sign-in, server functions (backup, groups, invites, scans)</td><td data-label="Where">EU (Paris, France)</td></tr>
-            <tr><td data-label="Provider">OpenAI</td><td data-label="What for">Reading receipt images you choose to scan</td><td data-label="Where">United States</td></tr>
+            <tr><td data-label="Provider">Anthropic (Claude)</td><td data-label="What for">Reading receipt images you choose to scan</td><td data-label="Where">United States</td></tr>
+            <tr><td data-label="Provider">OpenAI (ChatGPT)</td><td data-label="What for">Reading receipt images you choose to scan, when Claude is unavailable</td><td data-label="Where">United States</td></tr>
             <tr><td data-label="Provider">Apple</td><td data-label="What for">Sign in with Apple, App Store purchases, push delivery</td><td data-label="Where">Global</td></tr>
             <tr><td data-label="Provider">Google</td><td data-label="What for">Google sign-in, Google Play purchases, AdMob ads and consent, Play Integrity, push delivery</td><td data-label="Where">Global</td></tr>
             <tr><td data-label="Provider">RevenueCat</td><td data-label="What for">Plan and purchase status</td><td data-label="Where">United States</td></tr>
             <tr><td data-label="Provider">Expo</td><td data-label="What for">Sending push notifications</td><td data-label="Where">United States</td></tr>
             <tr><td data-label="Provider">Resend</td><td data-label="What for">Sending emails (codes, invites, group copies)</td><td data-label="Where">United States</td></tr>
             <tr><td data-label="Provider">Cloudflare</td><td data-label="What for">Hosting and protecting this website</td><td data-label="Where">Global</td></tr>
-            <tr><td data-label="Provider">exchangerate.fun</td><td data-label="What for">Currency rates (no personal entries)</td><td data-label="Where">Global</td></tr>
+            <tr><td data-label="Provider">exchangerate.fun, open.er-api.com, currency-api (jsDelivr)</td><td data-label="What for">Currency rates (no personal entries)</td><td data-label="Where">Global</td></tr>
           </tbody>
         </table>
       </div>
@@ -166,8 +167,8 @@
             <tr><td data-label="Data">Your account</td><td data-label="Kept until">You delete it (in the app, or by email request)</td></tr>
             <tr><td data-label="Data">A group and all its shared data</td><td data-label="Kept until">The Owner deletes the group. Members first receive an email copy.</td></tr>
             <tr><td data-label="Data">Your name in a group's history after you leave or are removed</td><td data-label="Kept until">Stays with the entries you added, so the group's records stay accurate. If you delete your account, it's replaced with "Former member".</td></tr>
-            <tr><td data-label="Data">Receipt images</td><td data-label="Kept until">Never saved by RatePocket. Only OpenAI's own abuse-monitoring retention (up to 30 days) applies.</td></tr>
-            <tr><td data-label="Data">Scan counters</td><td data-label="Kept until">A monthly count of scans per account or install. Kept so plan limits can't be reset, including after account deletion. They hold no receipt content.</td></tr>
+            <tr><td data-label="Data">Receipt images</td><td data-label="Kept until">Never saved by RatePocket. Only the retention of each AI service that received it applies (Anthropic and OpenAI: normally up to 30 days).</td></tr>
+            <tr><td data-label="Data">Scan counters</td><td data-label="Kept until">A count of scans per account or install: per month on a plan, in total for the 2 free trial scans. Kept so plan limits can't be reset, including after account deletion. They hold no receipt content.</td></tr>
             <tr><td data-label="Data">Push token</td><td data-label="Kept until">Replaced when it changes. Deleted with your account.</td></tr>
             <tr><td data-label="Data">Support emails</td><td data-label="Kept until">As long as needed to handle your request</td></tr>
           </tbody>

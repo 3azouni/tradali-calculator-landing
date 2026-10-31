@@ -15,7 +15,7 @@ Use Google’s definitions in Play Console. Do **not** treat every external tran
 | Device or other IDs (Advertising ID) | Yes (AdMob) | Yes (Google) | Advertising | Tied to ads / consent | |
 | Financial info — User payment info | No (Google Play holds card data) | N/A | — | — | Play Billing + RevenueCat entitlements only |
 | Purchase history / entitlements | Yes (via RevenueCat / Play) | Processing via RevenueCat/Google | App functionality | Paid features optional | Cloud includes owner-funded Groups |
-| Photos (receipt images) | Yes when user starts AI scan | Processing via Supabase Edge Function → OpenAI | App functionality | Yes — optional scan | Not a permanent cloud photo library; quota counters stored (2 trial / 55 Cloud per UTC month) |
+| Photos (receipt images) | Yes when user starts AI scan | Processing via Supabase Edge Function → Anthropic (Claude); OpenAI (ChatGPT) only when Claude is unavailable (29 Oct 2026) | App functionality | Yes — optional scan | Not a permanent cloud photo library; quota counters stored (2 trial / 55 Cloud per UTC month) |
 | Other user content (spending notes, amounts, categories) | Yes locally; yes in cloud if Cloud Backup on; yes in Group ledgers | Processing via Supabase when backed up / shared | App functionality | Cloud / Groups optional | Owner-funded Groups: invitees free |
 | Approximate location | Possibly via AdMob IP | Google ads | Advertising | Ads | |
 
