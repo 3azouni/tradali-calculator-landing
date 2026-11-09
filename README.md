@@ -18,7 +18,10 @@ Checked against the app on 2026-10-06 (`src/theme.ts`, `src/budget/categories.ts
 
 ## Store buttons
 
-Neither store listing is public yet (both 404 on 2026-10-06), so the homepage shows non-link "Coming soon" store labels (`.store.soon`) in the hero and the final CTA. When a listing goes live, replace that `<span class="store soon">` with the official App Store / Google Play badge linking to the listing.
+Both stores are live:
+
+- **App Store (iPhone):** https://apps.apple.com/lb/app/ratepocket-budget-planner/id6817911460 (app id 6817911460, live since 2026-11-09). The homepage hero and final CTA use Apple's official black "Download on the App Store" badge, self-hosted at `public/img/badges/app-store-en-us.svg` (downloaded from Apple's badge service, unaltered; only scaled in CSS, `.store-badge`). The homepage also has the `apple-itunes-app` meta for Safari's Smart App Banner.
+- **Google Play (Android):** https://play.google.com/store/apps/details?id=com.tradali.calculator (styled `.store` button).
 
 ## URLs
 

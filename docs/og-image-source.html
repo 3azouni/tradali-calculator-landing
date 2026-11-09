@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Source for public/og-image.jpg (1200x630). Base art = docs/og-image-base-clean.png (docs/og-image-base-2026-10.jpg with its old "Coming soon" row painted out); this page
+     replaces its old "Coming soon to iPhone & Android" row with Apple's official badge + Google Play text.
+     Render: msedge --headless --hide-scrollbars --window-size=1200,630 --screenshot=out.png docs/og-image-source.html -->
+<style>
+@font-face { font-family: PJS; src: url(../public/fonts/plus-jakarta-sans-700.woff) format("woff"); font-weight: 700; }
+html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+body { position: relative; background: url(og-image-base-clean.png) 0 0 / 1200px 630px no-repeat; font-family: PJS, sans-serif; }
+/* Cover the old row with clean background taken from the empty area just below it. */
+.patch { position: absolute; left: 56px; top: 412px; width: 520px; height: 82px;
+  background: url(og-image-base-2026-10.jpg) -56px -505px / 1200px 630px no-repeat;
+  -webkit-mask-image: linear-gradient(to right, #000 92%, transparent); mask-image: linear-gradient(to right, #000 92%, transparent); }
+.row { position: absolute; left: 76px; top: 424px; display: flex; align-items: center; gap: 20px; }
+.row img { height: 58px; width: auto; display: block; }
+.row span { color: #fff; font-size: 26px; font-weight: 700; }
+.row b { color: #5EE08F; font-weight: 700; }
+</style></head>
+<body>
+  <div class="row"><img src="../public/img/badges/app-store-en-us.svg" alt=""><span>and <b>Google Play</b></span></div>
+</body></html>

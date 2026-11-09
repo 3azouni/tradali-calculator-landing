@@ -74,7 +74,7 @@ p { margin: 0; }
 .btn-ghost:hover { border-color: var(--violet); color: #fff; }
 .btn-sm { min-height: 40px; padding: 8px 16px; font-size: 15px; }
 
-/* Store buttons. While a listing is not live they render as non-link "Coming soon" labels. */
+/* Store buttons. App Store uses Apple's official badge (img/badges, unaltered, only scaled); Google Play is the styled .store button. */
 .stores { display: flex; flex-wrap: wrap; gap: 12px; }
 .store {
   display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 20px 10px 16px;
@@ -84,9 +84,10 @@ p { margin: 0; }
 .store span { display: flex; flex-direction: column; line-height: 1.15; }
 .store small { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .02em; }
 .store strong { font-size: 17px; font-weight: 700; }
-.store.soon { cursor: default; }
 @media (max-width: 420px) { .store { padding: 8px 14px 8px 12px; gap: 10px; min-height: 52px; } .store strong { font-size: 16px; } }
-.store.soon small { color: var(--green); }
+.store-badge { display: inline-flex; border-radius: 14px; }
+.store-badge img { display: block; height: 56px; width: auto; }
+@media (max-width: 420px) { .store-badge img { height: 52px; } }
 a.store:hover { border-color: var(--violet); color: #fff; }
 
 /* ---------- Navigation ---------- */
